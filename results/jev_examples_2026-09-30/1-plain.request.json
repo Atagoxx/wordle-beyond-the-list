@@ -1,0 +1,40 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "context": "Judging English vocabulary."
+  },
+  "questions": {
+    "crane": {
+      "type": "noul",
+      "instructions": "'CRANE' is a common, everyday English word that most adult native speakers know."
+    },
+    "cigar": {
+      "type": "noul",
+      "instructions": "'CIGAR' is a common, everyday English word that most adult native speakers know."
+    },
+    "drama": {
+      "type": "noul",
+      "instructions": "'DRAMA' is a common, everyday English word that most adult native speakers know."
+    },
+    "caput": {
+      "type": "noul",
+      "instructions": "'CAPUT' is a common, everyday English word that most adult native speakers know."
+    },
+    "quoth": {
+      "type": "noul",
+      "instructions": "'QUOTH' is a common, everyday English word that most adult native speakers know."
+    },
+    "pilow": {
+      "type": "noul",
+      "instructions": "'PILOW' is a common, everyday English word that most adult native speakers know."
+    },
+    "shool": {
+      "type": "noul",
+      "instructions": "'SHOOL' is a common, everyday English word that most adult native speakers know."
+    },
+    "salet": {
+      "type": "noul",
+      "instructions": "'SALET' is a common, everyday English word that most adult native speakers know."
+    }
+  }
+}

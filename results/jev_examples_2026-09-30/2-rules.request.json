@@ -1,0 +1,40 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "context": "We want common, everyday English words that most adult native speakers know: no plurals ending in s, no obscure, archaic, or technical words."
+  },
+  "questions": {
+    "crane": {
+      "type": "noul",
+      "instructions": "'CRANE' is a common, everyday English word of the kind described."
+    },
+    "cigar": {
+      "type": "noul",
+      "instructions": "'CIGAR' is a common, everyday English word of the kind described."
+    },
+    "drama": {
+      "type": "noul",
+      "instructions": "'DRAMA' is a common, everyday English word of the kind described."
+    },
+    "caput": {
+      "type": "noul",
+      "instructions": "'CAPUT' is a common, everyday English word of the kind described."
+    },
+    "quoth": {
+      "type": "noul",
+      "instructions": "'QUOTH' is a common, everyday English word of the kind described."
+    },
+    "pilow": {
+      "type": "noul",
+      "instructions": "'PILOW' is a common, everyday English word of the kind described."
+    },
+    "shool": {
+      "type": "noul",
+      "instructions": "'SHOOL' is a common, everyday English word of the kind described."
+    },
+    "salet": {
+      "type": "noul",
+      "instructions": "'SALET' is a common, everyday English word of the kind described."
+    }
+  }
+}

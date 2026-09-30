@@ -69,7 +69,8 @@ python3 tool/parity_check.py                     # 核对浏览器引擎和 Pyth
 ```
 experiments/   每个实验一个脚本（编号见 EXPERIMENTS.md），common.py 是求解器核心
 data/          词表和每个词的先验打分（来源和协议见 data/README.md）
-results/       重跑得到的日志和 JSON；original_logs/ 是最初那次运行的原始日志
+results/       重跑得到的日志和 JSON；original_logs/ 是最初那次运行的原始日志；
+               jev_examples_2026-09-30/ 保存 8 个示例词完整的 Jev 原始请求和返回
 tool/          engine.js（浏览器求解器）、template.html、build.py、parity_check.py
 reproduce.sh   重跑全部确定性实验（4 核约 75 分钟）
 ```

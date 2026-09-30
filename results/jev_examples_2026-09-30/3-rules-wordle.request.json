@@ -1,0 +1,40 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "context": "Wordle answers are common, everyday English words that most adult native speakers know (no plurals ending in s, no obscure, archaic, or technical words)."
+  },
+  "questions": {
+    "crane": {
+      "type": "noul",
+      "instructions": "'CRANE' is a common everyday English word that could be a Wordle answer."
+    },
+    "cigar": {
+      "type": "noul",
+      "instructions": "'CIGAR' is a common everyday English word that could be a Wordle answer."
+    },
+    "drama": {
+      "type": "noul",
+      "instructions": "'DRAMA' is a common everyday English word that could be a Wordle answer."
+    },
+    "caput": {
+      "type": "noul",
+      "instructions": "'CAPUT' is a common everyday English word that could be a Wordle answer."
+    },
+    "quoth": {
+      "type": "noul",
+      "instructions": "'QUOTH' is a common everyday English word that could be a Wordle answer."
+    },
+    "pilow": {
+      "type": "noul",
+      "instructions": "'PILOW' is a common everyday English word that could be a Wordle answer."
+    },
+    "shool": {
+      "type": "noul",
+      "instructions": "'SHOOL' is a common everyday English word that could be a Wordle answer."
+    },
+    "salet": {
+      "type": "noul",
+      "instructions": "'SALET' is a common everyday English word that could be a Wordle answer."
+    }
+  }
+}

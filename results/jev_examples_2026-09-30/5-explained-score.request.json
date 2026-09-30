@@ -1,0 +1,96 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "game": "Wordle is the New York Times daily word game. Players have six tries to guess a hidden five-letter word; after each guess every letter is marked green (right letter, right spot), yellow (in the word, wrong spot) or gray (not in the word). The game accepts about 13,000 five-letter words as guesses, but the hidden answer is always drawn from a separate, hand-curated list of about 2,300 solutions picked by creator Josh Wardle and later edited by the New York Times. Solutions are familiar words a typical adult knows: plurals ending in S and most past tenses ending in ED are excluded, as are obscure, archaic, technical, foreign, and offensive words. The other ~10,000 accepted guesses are valid Scrabble-style words that are never solutions."
+  },
+  "questions": {
+    "crane": {
+      "type": "score",
+      "instructions": "How likely is 'CRANE' to be on the Wordle solution list?",
+      "criteria": [
+        "Never a Wordle solution (obscure, archaic, technical, a plural or inflection, or a misspelling)",
+        "Unlikely: a real word but too uncommon or too derivative",
+        "Borderline: known to many people but not typical",
+        "Likely: a familiar word that fits the solution list",
+        "Almost certainly on the Wordle solution list: a typical everyday word"
+      ]
+    },
+    "cigar": {
+      "type": "score",
+      "instructions": "How likely is 'CIGAR' to be on the Wordle solution list?",
+      "criteria": [
+        "Never a Wordle solution (obscure, archaic, technical, a plural or inflection, or a misspelling)",
+        "Unlikely: a real word but too uncommon or too derivative",
+        "Borderline: known to many people but not typical",
+        "Likely: a familiar word that fits the solution list",
+        "Almost certainly on the Wordle solution list: a typical everyday word"
+      ]
+    },
+    "drama": {
+      "type": "score",
+      "instructions": "How likely is 'DRAMA' to be on the Wordle solution list?",
+      "criteria": [
+        "Never a Wordle solution (obscure, archaic, technical, a plural or inflection, or a misspelling)",
+        "Unlikely: a real word but too uncommon or too derivative",
+        "Borderline: known to many people but not typical",
+        "Likely: a familiar word that fits the solution list",
+        "Almost certainly on the Wordle solution list: a typical everyday word"
+      ]
+    },
+    "caput": {
+      "type": "score",
+      "instructions": "How likely is 'CAPUT' to be on the Wordle solution list?",
+      "criteria": [
+        "Never a Wordle solution (obscure, archaic, technical, a plural or inflection, or a misspelling)",
+        "Unlikely: a real word but too uncommon or too derivative",
+        "Borderline: known to many people but not typical",
+        "Likely: a familiar word that fits the solution list",
+        "Almost certainly on the Wordle solution list: a typical everyday word"
+      ]
+    },
+    "quoth": {
+      "type": "score",
+      "instructions": "How likely is 'QUOTH' to be on the Wordle solution list?",
+      "criteria": [
+        "Never a Wordle solution (obscure, archaic, technical, a plural or inflection, or a misspelling)",
+        "Unlikely: a real word but too uncommon or too derivative",
+        "Borderline: known to many people but not typical",
+        "Likely: a familiar word that fits the solution list",
+        "Almost certainly on the Wordle solution list: a typical everyday word"
+      ]
+    },
+    "pilow": {
+      "type": "score",
+      "instructions": "How likely is 'PILOW' to be on the Wordle solution list?",
+      "criteria": [
+        "Never a Wordle solution (obscure, archaic, technical, a plural or inflection, or a misspelling)",
+        "Unlikely: a real word but too uncommon or too derivative",
+        "Borderline: known to many people but not typical",
+        "Likely: a familiar word that fits the solution list",
+        "Almost certainly on the Wordle solution list: a typical everyday word"
+      ]
+    },
+    "shool": {
+      "type": "score",
+      "instructions": "How likely is 'SHOOL' to be on the Wordle solution list?",
+      "criteria": [
+        "Never a Wordle solution (obscure, archaic, technical, a plural or inflection, or a misspelling)",
+        "Unlikely: a real word but too uncommon or too derivative",
+        "Borderline: known to many people but not typical",
+        "Likely: a familiar word that fits the solution list",
+        "Almost certainly on the Wordle solution list: a typical everyday word"
+      ]
+    },
+    "salet": {
+      "type": "score",
+      "instructions": "How likely is 'SALET' to be on the Wordle solution list?",
+      "criteria": [
+        "Never a Wordle solution (obscure, archaic, technical, a plural or inflection, or a misspelling)",
+        "Unlikely: a real word but too uncommon or too derivative",
+        "Borderline: known to many people but not typical",
+        "Likely: a familiar word that fits the solution list",
+        "Almost certainly on the Wordle solution list: a typical everyday word"
+      ]
+    }
+  }
+}

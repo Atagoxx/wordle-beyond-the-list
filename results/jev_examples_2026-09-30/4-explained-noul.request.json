@@ -1,0 +1,40 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "game": "Wordle is the New York Times daily word game. Players have six tries to guess a hidden five-letter word; after each guess every letter is marked green (right letter, right spot), yellow (in the word, wrong spot) or gray (not in the word). The game accepts about 13,000 five-letter words as guesses, but the hidden answer is always drawn from a separate, hand-curated list of about 2,300 solutions picked by creator Josh Wardle and later edited by the New York Times. Solutions are familiar words a typical adult knows: plurals ending in S and most past tenses ending in ED are excluded, as are obscure, archaic, technical, foreign, and offensive words. The other ~10,000 accepted guesses are valid Scrabble-style words that are never solutions."
+  },
+  "questions": {
+    "crane": {
+      "type": "noul",
+      "instructions": "'CRANE' is on the official Wordle solution list (it can be a daily answer)."
+    },
+    "cigar": {
+      "type": "noul",
+      "instructions": "'CIGAR' is on the official Wordle solution list (it can be a daily answer)."
+    },
+    "drama": {
+      "type": "noul",
+      "instructions": "'DRAMA' is on the official Wordle solution list (it can be a daily answer)."
+    },
+    "caput": {
+      "type": "noul",
+      "instructions": "'CAPUT' is on the official Wordle solution list (it can be a daily answer)."
+    },
+    "quoth": {
+      "type": "noul",
+      "instructions": "'QUOTH' is on the official Wordle solution list (it can be a daily answer)."
+    },
+    "pilow": {
+      "type": "noul",
+      "instructions": "'PILOW' is on the official Wordle solution list (it can be a daily answer)."
+    },
+    "shool": {
+      "type": "noul",
+      "instructions": "'SHOOL' is on the official Wordle solution list (it can be a daily answer)."
+    },
+    "salet": {
+      "type": "noul",
+      "instructions": "'SALET' is on the official Wordle solution list (it can be a daily answer)."
+    }
+  }
+}

@@ -83,7 +83,8 @@ The UI is currently in Chinese.
 ```
 experiments/   one script per experiment (numbered in EXPERIMENTS.md); common.py holds the solver core
 data/          word lists and the per-word prior scores (see data/README.md for sources and licenses)
-results/       logs and JSON from the re-run; original_logs/ holds the first runs verbatim
+results/       logs and JSON from the re-run; original_logs/ holds the first runs verbatim;
+               jev_examples_2026-09-30/ keeps raw Jev requests and replies for eight example words
 tool/          engine.js (browser solver), template.html, build.py, parity_check.py
 reproduce.sh   re-runs every deterministic experiment (~75 min on 4 cores)
 ```

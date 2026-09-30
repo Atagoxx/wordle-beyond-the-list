@@ -1,0 +1,15 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "game": "Wordle is the New York Times daily word game. Players have six tries to guess a hidden five-letter word; after each guess every letter is marked green (right letter, right spot), yellow (in the word, wrong spot) or gray (not in the word). The game accepts about 13,000 five-letter words as guesses, but the hidden answer is always drawn from a separate, hand-curated list of about 2,300 solutions picked by creator Josh Wardle and later edited by the New York Times. Solutions are familiar words a typical adult knows: plurals ending in S and most past tenses ending in ED are excluded, as are obscure, archaic, technical, foreign, and offensive words. The other ~10,000 accepted guesses are valid Scrabble-style words that are never solutions.",
+    "previous_guesses": [
+      "TONES: T=gray, O=yellow, N=yellow, E=gray, S=gray"
+    ]
+  },
+  "questions": {
+    "q": {
+      "type": "noul",
+      "instructions": "'CRANE' is still consistent with all the feedback above, so it could be the hidden answer."
+    }
+  }
+}
