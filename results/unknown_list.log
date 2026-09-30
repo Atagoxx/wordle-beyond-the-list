@@ -1,0 +1,5 @@
+oracle: knows the 2,315-word list    first SOARE  avg 3.4635  over 6: 0  dist {2: 58, 3: 1242, 4: 904, 5: 106, 6: 5}  (11s)
+no list: uniform over 12,972 words   first TARES  avg 3.9620  over 6: 2  dist {2: 16, 3: 545, 4: 1315, 5: 391, 6: 46, 7: 2}  (50s)
+no list: Jev prior p^1               first TARES  avg 3.5987  over 6: 1  dist {2: 39, 3: 1016, 4: 1103, 5: 150, 6: 6, 7: 1}  (94s)
+no list: Jev prior p^2               first TARES  avg 3.5866  over 6: 3  dist {2: 50, 3: 1069, 4: 1007, 5: 169, 6: 17, 7: 3}  (139s)
+no list: Jev prior p^4               first TRACE  avg 3.5594  over 6: 7  dist {1: 1, 2: 91, 3: 1118, 4: 869, 5: 196, 6: 33, 7: 7}  (191s)

@@ -1,0 +1,285 @@
+{
+  "saved_results": {
+    "history": {
+      "sha256": "e9b4f1592b313cf03e8784c602d117ab49024834d7ad880a318a96d0230a4187",
+      "days": 1925,
+      "first": "2021-06-19",
+      "last": "2026-09-25"
+    },
+    "baseline": {
+      "days": 633,
+      "total_guesses": 1961,
+      "mean_guesses": 3.0979462875197474,
+      "distribution": {
+        "2": 84,
+        "3": 418,
+        "4": 118,
+        "5": 11,
+        "6": 2
+      },
+      "one_guess_fraction": 0.0,
+      "two_guesses_fraction": 0.13270142180094788,
+      "at_most_three_fraction": 0.7930489731437599,
+      "saved_day_scores_match": true
+    },
+    "pilots": {
+      "pilot_branch_cost_original_96.json": {
+        "days": 96,
+        "baseline_matches": true,
+        "summary": {
+          "baseline": {
+            "total_guesses": 299,
+            "mean_guesses": 3.1145833333333335,
+            "net_turns_saved": 0,
+            "fewer_same_more": [
+              0,
+              96,
+              0
+            ]
+          },
+          "branch": {
+            "total_guesses": 302,
+            "mean_guesses": 3.1458333333333335,
+            "net_turns_saved": -3,
+            "fewer_same_more": [
+              2,
+              89,
+              5
+            ]
+          },
+          "conditional": {
+            "total_guesses": 302,
+            "mean_guesses": 3.1458333333333335,
+            "net_turns_saved": -3,
+            "fewer_same_more": [
+              2,
+              89,
+              5
+            ]
+          }
+        }
+      },
+      "pilot_rollout_second_original_96.json": {
+        "days": 96,
+        "baseline_matches": true,
+        "summary": {
+          "baseline": {
+            "total_guesses": 299,
+            "mean_guesses": 3.1145833333333335,
+            "net_turns_saved": 0,
+            "fewer_same_more": [
+              0,
+              96,
+              0
+            ]
+          },
+          "rollout": {
+            "total_guesses": 300,
+            "mean_guesses": 3.125,
+            "net_turns_saved": -1,
+            "fewer_same_more": [
+              2,
+              91,
+              3
+            ]
+          }
+        }
+      },
+      "pilot_temporal_original_64.json": {
+        "days": 64,
+        "baseline_matches": true,
+        "summary": {
+          "baseline": {
+            "total_guesses": 196,
+            "mean_guesses": 3.0625,
+            "net_turns_saved": 0,
+            "fewer_same_more": [
+              0,
+              64,
+              0
+            ]
+          },
+          "structural_salet": {
+            "total_guesses": 196,
+            "mean_guesses": 3.0625,
+            "net_turns_saved": 0,
+            "fewer_same_more": [
+              0,
+              64,
+              0
+            ]
+          },
+          "full_salet": {
+            "total_guesses": 198,
+            "mean_guesses": 3.09375,
+            "net_turns_saved": -2,
+            "fewer_same_more": [
+              0,
+              62,
+              2
+            ]
+          },
+          "base_adaptive": {
+            "total_guesses": 199,
+            "mean_guesses": 3.109375,
+            "net_turns_saved": -3,
+            "fewer_same_more": [
+              12,
+              37,
+              15
+            ]
+          },
+          "full_adaptive": {
+            "total_guesses": 202,
+            "mean_guesses": 3.15625,
+            "net_turns_saved": -6,
+            "fewer_same_more": [
+              11,
+              36,
+              17
+            ]
+          }
+        }
+      }
+    },
+    "temporal_prediction": {
+      "days": 268,
+      "source_hashes_match": true,
+      "training_dates_precede_predictions": true,
+      "summary": {
+        "base": {
+          "days": 268,
+          "mean_log2p": -10.460802663701962,
+          "mean_log2p_gain_vs_base": 0.0,
+          "descriptive_normal_ci95_gain": [
+            0.0,
+            0.0
+          ]
+        },
+        "structural": {
+          "days": 268,
+          "mean_log2p": -10.474548054698282,
+          "mean_log2p_gain_vs_base": -0.013745390996320845,
+          "descriptive_normal_ci95_gain": [
+            -0.03369362663233537,
+            0.0062028446396936825
+          ]
+        },
+        "full": {
+          "days": 268,
+          "mean_log2p": -10.465912569910223,
+          "mean_log2p_gain_vs_base": -0.005109906208261284,
+          "descriptive_normal_ci95_gain": [
+            -0.028345578900887958,
+            0.01812576648436539
+          ]
+        }
+      }
+    },
+    "recorded_paths_checked": 800,
+    "path_check_scope": "Legal guesses, guess count, and terminal outcome checked using independent feedback; this alone does not revalidate action selection.",
+    "saved_safety_scope": "Partial stress-traversal arithmetic and GINGS feedback checked; neither archived UNKNOWN search is a complete six-turn certificate."
+  },
+  "paid_api_calls": 0,
+  "solver_checks_requested": true,
+  "full_baseline_requested": false,
+  "limitations": [
+    "Old pilot_rollout_validation.json omitted state and weights; its exact input is unrecoverable from that file.",
+    "Old 60-second stress traversal and 30-second certificate search omitted complete invocation metadata.",
+    "UNKNOWN certificate searches establish neither feasibility nor impossibility.",
+    "Saved pilot statistics are historical exploratory results, not a new independent holdout."
+  ],
+  "solver_checks": {
+    "fully_specified_inputs": {
+      "ferns": 17,
+      "terns": 13,
+      "turns": 11,
+      "burns": 7,
+      "barns": 5,
+      "warns": 3,
+      "horns": 2,
+      "corns": 1
+    },
+    "feedback_pairs_checked": 103776,
+    "formula_minimizers": {
+      "baseline": "bathe",
+      "branch": "bathe",
+      "conditional": "bathe"
+    },
+    "formula_check": "All legal guesses directly enumerated; implementation-selected actions attain minimum costs.",
+    "rollout": {
+      "baseline_paths": {
+        "barns": [
+          "bathe",
+          "barns"
+        ],
+        "burns": [
+          "bathe",
+          "burns"
+        ],
+        "corns": [
+          "bathe",
+          "corns"
+        ],
+        "ferns": [
+          "bathe",
+          "ferns"
+        ],
+        "horns": [
+          "bathe",
+          "horns"
+        ],
+        "terns": [
+          "bathe",
+          "terns"
+        ],
+        "turns": [
+          "bathe",
+          "turns"
+        ],
+        "warns": [
+          "bathe",
+          "warns"
+        ]
+      },
+      "baseline_expected_guesses": 2.0,
+      "candidate_costs": {
+        "bathe": 2.0,
+        "beath": 2.0,
+        "blate": 2.016949152542373,
+        "tubae": 2.016949152542373,
+        "abate": 2.016949152542373,
+        "ferns": 2.135593220338983
+      },
+      "selected": "bathe",
+      "exact_recursive_value_matches_independent_replay": true
+    },
+    "gings": {
+      "prior_day": "2026-09-25",
+      "guesses": [
+        "salet",
+        "hoiks",
+        "virus",
+        "finds",
+        "wings",
+        "pings",
+        "zings",
+        "mings",
+        "bings",
+        "gings"
+      ],
+      "strict_candidate_reduction": true,
+      "in_original_answer_list": false,
+      "in_recorded_history": false,
+      "hypothetical_allowed_answer_only": true
+    },
+    "guard": {
+      "valid_small_certificate_verified": true,
+      "incomplete_certificate_rejected": true,
+      "one_turn_impossibility_verified": true,
+      "zero_budget_is_unknown": true
+    }
+  },
+  "elapsed_seconds": 2.831317085999217,
+  "status": "PASS"
+}

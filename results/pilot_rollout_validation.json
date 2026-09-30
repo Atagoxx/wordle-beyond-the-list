@@ -1,0 +1,14 @@
+{
+  "validation": "Independent weighted per-answer simulation on an eight-word confusable family; recursive baseline value and shortlist rollout minimum agree",
+  "baseline_value": 2.1621621621621623,
+  "candidate_costs": {
+    "terfs": 2.1621621621621623,
+    "ferns": 2.1621621621621623,
+    "terns": 2.1621621621621623,
+    "flans": 2.27027027027027,
+    "turfs": 2.2972972972972974,
+    "fight": 2.540540540540541
+  },
+  "selected": "terfs",
+  "elapsed_seconds": 2.247121810913086
+}

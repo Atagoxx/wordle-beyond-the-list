@@ -1,0 +1,501 @@
+<title>Wordle 求解器</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+  :root {
+    --ground: #ECEFF1;
+    --surface: #FAFBFC;
+    --ink: #16202A;
+    --muted: #5A6772;
+    --line: #D2D8DD;
+    --accent: #2A56BF;
+    --accent-soft: #DCE4F7;
+    --g: #4A9657;
+    --y: #C39A22;
+    --x: #7A838B;
+    --tile-empty: #FFFFFF;
+    --tile-ink: #FFFFFF;
+    --bar: #9FB3E3;
+    --warn: #A4372A;
+    --cjk: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+    --tile-font: "Archivo", "Helvetica Neue", Arial, var(--cjk);
+    --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --ground: #10151A;
+      --surface: #182028;
+      --ink: #E4EAEE;
+      --muted: #93A0AB;
+      --line: #2B3540;
+      --accent: #8AAAFF;
+      --accent-soft: #22304D;
+      --g: #3E874C;
+      --y: #AE8819;
+      --x: #58626B;
+      --tile-empty: #10151A;
+      --bar: #3F5A9A;
+      --warn: #E08A7C;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --ground: #10151A;
+    --surface: #182028;
+    --ink: #E4EAEE;
+    --muted: #93A0AB;
+    --line: #2B3540;
+    --accent: #8AAAFF;
+    --accent-soft: #22304D;
+    --g: #3E874C;
+    --y: #AE8819;
+    --x: #58626B;
+    --tile-empty: #10151A;
+    --bar: #3F5A9A;
+    --warn: #E08A7C;
+  }
+  body { background: var(--ground); color: var(--ink); font-family: var(--cjk); font-size: 15px; line-height: 1.55; }
+  .wrap { max-width: 540px; margin: 0 auto; padding-inline: 16px; padding-block: 20px 40px; display: grid; gap: 18px; }
+  header { display: grid; gap: 4px; }
+  .eyebrow { font-size: 12px; letter-spacing: .08em; color: var(--muted); }
+  h1 { font-family: var(--tile-font); font-weight: 800; font-size: 28px; line-height: 1.15; margin: 0; letter-spacing: -.01em; text-wrap: balance; }
+  .lede { margin: 0; color: var(--muted); font-size: 14px; }
+  section { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: grid; gap: 12px; }
+  h2 { margin: 0; font-size: 13px; letter-spacing: .08em; color: var(--muted); font-weight: 600; }
+  .rows { display: grid; gap: 6px; }
+  .row { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+  .tile { aspect-ratio: 1 / 1; max-width: 100%; border: 0; border-radius: 4px; display: grid; place-items: center;
+          font-family: var(--tile-font); font-weight: 800; font-size: clamp(20px, 7vw, 30px); text-transform: uppercase;
+          color: var(--tile-ink); cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent;
+          transition: background-color .15s ease, transform .1s ease; }
+  .tile:active { transform: scale(.96); }
+  .tile:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .c0 { background: var(--x); } .c1 { background: var(--y); } .c2 { background: var(--g); }
+  .tile.empty { background: var(--tile-empty); border: 2px solid var(--line); color: var(--ink); cursor: default; }
+  .row.draft .tile:not(.empty) { box-shadow: inset 0 0 0 2px rgba(255,255,255,.35); }
+  .hint { font-size: 13px; color: var(--muted); margin: 0; }
+  .entry { display: flex; gap: 8px; flex-wrap: wrap; }
+  .entry input { flex: 1 1 140px; min-width: 0; font-family: var(--tile-font); font-weight: 700; font-size: 20px; letter-spacing: .18em;
+                 text-transform: uppercase; padding: 8px 12px; border: 2px solid var(--line); border-radius: 6px;
+                 background: var(--tile-empty); color: var(--ink); }
+  button { font: inherit; font-size: 14px; border-radius: 6px; padding: 9px 14px; cursor: pointer; border: 1px solid var(--line);
+           background: var(--surface); color: var(--ink); }
+  button.primary { background: var(--accent); border-color: var(--accent); color: var(--surface); font-weight: 600; }
+  button:disabled { opacity: .45; cursor: default; }
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .actions .ghost { border-color: transparent; background: transparent; color: var(--muted); padding-inline: 6px; }
+  .msg { font-size: 13px; color: var(--warn); margin: 0; min-height: 0; }
+  .rec-word { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; max-width: 320px; }
+  .rec-word .tile { background: var(--accent); cursor: default; font-size: clamp(20px, 6.5vw, 28px); }
+  .stats { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; color: var(--muted); }
+  .stats b { font-family: var(--mono); font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .chip { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 99px; background: var(--accent-soft); color: var(--accent); }
+  .alts { display: grid; gap: 4px; }
+  .alt { display: grid; grid-template-columns: 5.5em 1fr auto; align-items: center; gap: 10px; width: 100%; text-align: left;
+         padding: 7px 10px; font-size: 13px; }
+  .alt .w { font-family: var(--tile-font); font-weight: 700; letter-spacing: .12em; font-size: 15px; }
+  .alt .d { color: var(--muted); }
+  .alt .n { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  .count { font-family: var(--tile-font); font-weight: 800; font-size: 24px; }
+  .likely { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 4px 14px; }
+  .likely li { display: grid; grid-template-columns: 4.6em 1fr 3.4em; align-items: center; gap: 8px; font-size: 13px; }
+  .likely .w { font-family: var(--tile-font); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+  .likely .track { height: 6px; background: var(--ground); border-radius: 3px; overflow: hidden; }
+  .likely .fill { display: block; height: 100%; background: var(--bar); }
+  .likely .p { font-family: var(--mono); font-size: 12px; text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .progress { height: 3px; background: var(--ground); border-radius: 2px; overflow: hidden; }
+  .progress i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .2s linear; }
+  details { font-size: 13px; color: var(--muted); }
+  details summary { cursor: pointer; color: var(--ink); font-weight: 600; }
+  details p { margin: 8px 0 0; max-width: 62ch; }
+  table.sim { border-collapse: collapse; margin-top: 8px; font-size: 13px; width: 100%; }
+  table.sim td { padding: 4px 6px; border-top: 1px solid var(--line); }
+  table.sim td.n { font-family: var(--mono); text-align: right; font-variant-numeric: tabular-nums; color: var(--ink); }
+  @media (prefers-reduced-motion: reduce) { .tile, .progress i { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">真实答案历史 · 信息量搜索 · JEV 常用词判断</div>
+    <h1>Wordle 求解器</h1>
+    <p class="lede">输入你猜的词，点格子把颜色改成游戏里的样子，再点「记下这一行」。它会算出下一步猜什么，和还剩哪些可能的答案。</p>
+  </header>
+
+  <section aria-labelledby="board-h">
+    <h2 id="board-h">你的棋盘</h2>
+    <div class="rows" id="rows"></div>
+    <div class="row draft" id="draft" aria-label="正在输入的一行"></div>
+    <p class="hint" id="draft-hint">点格子切换颜色：灰 → 黄 → 绿。</p>
+    <form class="entry" id="entry" autocomplete="off">
+      <label for="word" class="hint" style="flex-basis:100%">这一行猜的词</label>
+      <input id="word" name="word" maxlength="5" inputmode="text" autocapitalize="characters" spellcheck="false"
+             enterkeyhint="done" placeholder="例如 SALET" aria-describedby="draft-hint">
+      <button type="submit" class="primary" id="commit">记下这一行</button>
+    </form>
+    <p class="msg" id="msg" hidden></p>
+    <div class="actions">
+      <button type="button" id="use-rec">填入推荐词</button>
+      <button type="button" class="ghost" id="undo">撤销上一行</button>
+      <button type="button" class="ghost" id="reset">新的一局</button>
+      <button type="button" class="ghost" id="sample">载入示例</button>
+    </div>
+  </section>
+
+  <section aria-labelledby="rec-h" aria-live="polite">
+    <h2 id="rec-h">下一步推荐</h2>
+    <div class="progress" id="progress" hidden><i id="progress-bar"></i></div>
+    <div id="rec"></div>
+  </section>
+
+  <section aria-labelledby="cand-h">
+    <h2 id="cand-h">还可能是答案的词</h2>
+    <div id="cand"></div>
+  </section>
+
+  <details>
+    <summary>它是怎么算的，靠不靠谱</summary>
+    <p>候选是全部 12,972 个合法猜测词，分成三类：原始 2,315 词名单里还没出过的、已经当过答案的（2026 年 2 月起纽约时报会重复出题）、原始名单以外的新词。每一类占多少，按最近 180 个真实答案里的比例估计；同一类里，再按 TypeSafe 的 Jev 模型和英语词频表判断“像不像日常词”来分配。词频数据来自 <a href="https://github.com/rspeer/wordfreq">wordfreq</a>（Robyn Speer），按 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans">CC BY-SA 4.0</a> 使用。</p>
+    <p id="hist-info">正在读取历史答案。</p>
+    <p id="jev-note"></p>
+    <p>每一步，它对所有合法词估算“再猜这个词还要几次”，兼顾能排除多少候选和直接猜中的机会，所以有时会推荐一个不可能是答案、但最能缩小范围的探路词。全部计算都在你的手机上完成，不调用任何接口。</p>
+    <p>逐日回测：2025-01-01 到 2026-09-25 的 633 天真实答案，每天只用那天之前出过的答案，从第一步起完全照推荐猜。所有方案都没有超过 6 次的局。</p>
+    <table class="sim"><tbody>{{SIMROWS}}</tbody></table>
+    <p>带 * 的平均只算能找到答案的那些天：只认原始名单的算法，碰到名单外的新词或重复的旧词就找不到答案。</p>
+  </details>
+</div>
+
+<script type="text/js-worker" id="engine-src">{{ENGINE}}
+self.onmessage = function (e) {
+  var d = e.data;
+  if (d.type === "init") { ENGINE.init(d.words, d.weights); return; }
+  if (d.type === "solve") {
+    var out = ENGINE.solve(d.history, { top: 5, likely: 90, forced: d.forced, noRank: d.noRank, onProgress: function (f) {
+      self.postMessage({ type: "progress", id: d.id, f: f });
+    } });
+    out.type = "result"; out.id = d.id;
+    self.postMessage(out);
+  }
+};
+</script>
+<script>
+var WORDS = "{{WORDS}}";
+var BASE = "{{WEIGHTS}}";        // Jev + word-frequency score per word, packed base 36
+var ORIG = "{{ORIG}}";           // hex bitset: 1 = on the original 2,315-word answer list
+var HIST_START = "{{HIST_START}}";
+var HIST = "{{HIST}}";           // one answer per day from HIST_START, 5 letters each
+var OPENERS = {{OPENERS}};       // walk-forward backtest per opener
+var SAMPLE = [{ word: "crane", colors: [2, 0, 0, 0, 2] }, { word: "close", colors: [2, 0, 1, 2, 2] }];
+
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  // The portfolio build (hqhs.me) states plainly that it offers no Jev features; the open-source build points to the scripts.
+  var ON_PORTFOLIO = /(^|\.)hqhs\.me$/.test(location.hostname);
+  $("jev-note").textContent = ON_PORTFOLIO
+    ? "关于 Jev：这个版本不提供 Jev 功能。页面里用到的 Jev 打分，是事先离线算好、烘焙进页面的，使用时不会调用 Jev，也不需要密钥。"
+    : "关于 Jev：每个词的 Jev 打分是事先离线算好、烘焙进页面的，使用时不会调用 Jev，也不需要密钥。想用自己的密钥重新打分或试新的提示词，" +
+      "可以用代码仓库里的 experiments/jev_score_words.py，再用 experiments/build_prior.py 和 tool/build.py 重新生成页面。";
+  var KEY = "wordle-solver-rows";
+  var rows = load();
+  var draftColors = [0, 0, 0, 0, 0];
+  var lastRec = "salet";
+  var SOLVED_KEY = "wordle-solver-solved";
+  var N = WORDS.length / 5;
+  var INDEX = {};
+  for (var q = 0; q < N; q++) INDEX[WORDS.substr(q * 5, 5)] = q;
+
+  function isoDay(d) {
+    return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  }
+  function today() { return isoDay(new Date()); }
+  function loadSolved() {
+    try { var v = JSON.parse(localStorage.getItem(SOLVED_KEY) || "{}"); return v && typeof v === "object" ? v : {}; } catch (e) { return {}; }
+  }
+  function saveSolved(m) { try { localStorage.setItem(SOLVED_KEY, JSON.stringify(m)); } catch (e) {} }
+
+  // every known answer as [date, word index]: the built-in history plus days solved on this device
+  function knownAnswers() {
+    var list = [], seen = {};
+    var p = HIST_START.split("-");
+    var d = new Date(+p[0], +p[1] - 1, +p[2]);
+    for (var i = 0; i < HIST.length; i += 5) {
+      var day = isoDay(d);
+      list.push([day, INDEX[HIST.substr(i, 5)]]);
+      seen[day] = 1;
+      d.setDate(d.getDate() + 1);
+    }
+    var local = loadSolved(), extra = 0;
+    Object.keys(local).forEach(function (day) {
+      if (!seen[day] && INDEX[local[day]] !== undefined) { list.push([day, INDEX[local[day]]]); extra++; }
+    });
+    list.sort(function (a, b) { return a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0; });
+    return { list: list, extra: extra, builtInEnd: isoDay(new Date(d.getTime() - 864e5)) };
+  }
+
+  // prior for today's puzzle: category shares from the last 180 answers, Jev/frequency score within a category
+  function buildWeights() {
+    var k = knownAnswers(), day = today();
+    var before = k.list.filter(function (x) { return x[0] < day; });
+    var windowStart = Math.max(0, before.length - 180);
+    var used = new Uint8Array(N), counts = [1, 1, 1];
+    before.forEach(function (x, i) {
+      if (i >= windowStart) counts[used[x[1]] ? 1 : isOrig(x[1]) ? 0 : 2]++;
+      used[x[1]] = 1;
+    });
+    var total = counts[0] + counts[1] + counts[2];
+    var share = counts.map(function (c) { return c / total; });
+    var base = new Float64Array(N), sums = [0, 0, 0], cat = new Uint8Array(N);
+    for (var i = 0; i < N; i++) {
+      base[i] = Math.pow(10, -parseInt(BASE.substr(i * 2, 2), 36) / 100);
+      cat[i] = used[i] ? 1 : isOrig(i) ? 0 : 2;
+      sums[cat[i]] += base[i];
+    }
+    var w = new Float64Array(N);
+    for (i = 0; i < N; i++) w[i] = share[cat[i]] * base[i] / sums[cat[i]];
+    return { w: w, share: share, known: before.length, extra: k.extra, builtInEnd: k.builtInEnd };
+  }
+  function isOrig(i) { return (parseInt(ORIG[i >> 2], 16) >> (3 - (i & 3))) & 1; }
+
+  var PRIOR = buildWeights();
+  var pctShare = function (x) { return Math.round(x * 100) + "%"; };
+  $("hist-info").textContent = "历史答案内置到 " + PRIOR.builtInEnd + "，今天之前一共已知 " + PRIOR.known.toLocaleString("en-US") +
+    " 天" + (PRIOR.extra ? "，其中 " + PRIOR.extra + " 天是你在这台设备上猜中后记下的" : "") +
+    "。当前比例：原始名单里没出过的词 " + pctShare(PRIOR.share[0]) + "，已经出过的词 " + pctShare(PRIOR.share[1]) +
+    "，名单外的新词 " + pctShare(PRIOR.share[2]) + "。每次你猜中（最后一行全绿），页面会把答案记在本机，之后自动算进来。";
+  var reqId = 0, worker = null;
+
+  function load() {
+    try { var v = JSON.parse(localStorage.getItem(KEY) || "[]"); return Array.isArray(v) ? v : []; } catch (e) { return []; }
+  }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(rows)); } catch (e) {} }
+  function codeOf(colors) { return colors[0] + 3 * colors[1] + 9 * colors[2] + 27 * colors[3] + 81 * colors[4]; }
+  var NAMES = ["灰", "黄", "绿"];
+
+  function tile(letter, color, onTap, label) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "tile " + (letter ? "c" + color : "empty");
+    b.textContent = letter || "";
+    if (letter && onTap) {
+      b.setAttribute("aria-label", label + "：" + letter.toUpperCase() + "，" + NAMES[color] + "色，点按切换");
+      b.addEventListener("click", onTap);
+    } else {
+      b.tabIndex = -1;
+      b.setAttribute("aria-hidden", "true");
+    }
+    return b;
+  }
+
+  function renderRows() {
+    var box = $("rows");
+    box.innerHTML = "";
+    rows.forEach(function (r, ri) {
+      var div = document.createElement("div");
+      div.className = "row";
+      for (var i = 0; i < 5; i++) {
+        (function (i) {
+          div.appendChild(tile(r.word[i], r.colors[i], function () {
+            r.colors[i] = (r.colors[i] + 1) % 3; save(); renderRows(); solve();
+          }, "第 " + (ri + 1) + " 行第 " + (i + 1) + " 格"));
+        })(i);
+      }
+      box.appendChild(div);
+    });
+    $("undo").disabled = !rows.length;
+  }
+
+  function renderDraft() {
+    var w = $("word").value.toLowerCase().replace(/[^a-z]/g, "").slice(0, 5);
+    var box = $("draft");
+    box.innerHTML = "";
+    for (var i = 0; i < 5; i++) {
+      (function (i) {
+        box.appendChild(tile(w[i], draftColors[i], function () {
+          draftColors[i] = (draftColors[i] + 1) % 3; renderDraft();
+        }, "输入行第 " + (i + 1) + " 格"));
+      })(i);
+    }
+    $("commit").disabled = w.length !== 5;
+  }
+
+  function showMsg(text, label, action) {
+    var m = $("msg");
+    m.textContent = text || "";
+    m.hidden = !text;
+    if (text && label) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "ghost";
+      b.textContent = label;
+      b.addEventListener("click", action);
+      m.appendChild(document.createTextNode(" "));
+      m.appendChild(b);
+    }
+  }
+
+  function pct(x) {
+    var v = x * 100;
+    if (v === 0) return "0%";
+    return (v >= 10 ? v.toFixed(0) : v >= 1 ? v.toFixed(1) : Number(v.toPrecision(2)).toString()) + "%";
+  }
+
+  function renderResult(out) {
+    var rec = $("rec"), cand = $("cand");
+    if (!out.count) {
+      rec.innerHTML = '<p class="msg">没有任何合法词符合这些颜色。多半是某一格颜色点错了，点一下对应的格子改回来。</p>';
+      cand.innerHTML = "";
+      lastRec = "";
+      return;
+    }
+    var top = out.rec[0];
+    lastRec = top.word;
+    var left = function (r) { var n = Math.pow(2, Math.max(out.entropy - r.bits, 0)); return n < 1.05 ? "1" : n < 10 ? n.toFixed(1) : Math.round(n).toLocaleString("en-US"); };
+    var html = '<div class="rec-word" aria-label="推荐 ' + top.word.toUpperCase() + '">';
+    for (var i = 0; i < 5; i++) html += '<div class="tile">' + top.word[i] + "</div>";
+    html += "</div>";
+    var loss = function (s) { return s.fails ? "超过 6 次 " + s.fails + " 局" : "633 天里从没超过 6 次"; };
+    if (top.sim) {
+      html += '<div class="stats"><span>回测平均 <b>' + top.sim.avg.toFixed(2) + "</b> 次猜中</span>" +
+              "<span>3 次内猜中 <b>" + (top.sim.le3 * 100).toFixed(0) + "%</b></span>" +
+              "<span>" + loss(top.sim) + "</span></div>";
+    } else {
+      html += '<div class="stats"><span>猜完平均还剩约 <b>' + left(top) + "</b> 个候选</span>" +
+              "<span>这一步直接猜中 <b>" + pct(top.pwin) + "</b></span>" +
+              "<span>信息量 <b>" + top.bits.toFixed(2) + "</b> bit</span></div>";
+    }
+    if (out.count === 1) html += '<span class="chip">只剩这一个，就是它</span>';
+    else if (top.sim) html += '<span class="chip">开局词：真实答案回测最好</span>';
+    else if (top.pwin === 0) html += '<span class="chip">探路词：它不会是答案，但能排除最多候选</span>';
+    if (out.rec.length > 1) {
+      html += '<div class="alts" aria-label="其他选择">';
+      out.rec.slice(1).forEach(function (r) {
+        html += '<button type="button" class="alt" data-w="' + r.word + '"><span class="w">' + r.word.toUpperCase() +
+                '</span><span class="d">' + (r.sim ? loss(r.sim) : r.pwin > 0 ? "可能是答案 " + pct(r.pwin) : "探路词") +
+                '</span><span class="n">' + (r.sim ? "平均 " + r.sim.avg.toFixed(2) + " 次" : "剩约 " + left(r) + " 个") + "</span></button>";
+      });
+      html += "</div><p class=\"hint\">" + (top.sim
+        ? "开局词是用 633 天真实答案逐日回测比出来的，每天只用那天之前出过的答案，后面都照推荐猜。"
+        : "点其他选择可以填进输入框。排序综合了“能排除多少”和“直接猜中的机会”，所以排第一的不一定剩得最少。") + "</p>";
+    }
+    rec.innerHTML = html;
+    Array.prototype.forEach.call(rec.querySelectorAll(".alt"), function (b) {
+      b.addEventListener("click", function () { fill(b.getAttribute("data-w")); });
+    });
+
+    var ch = '<div class="count">' + out.count.toLocaleString("en-US") + ' <span class="hint">个词还符合所有颜色</span></div>';
+    ch += '<ul class="likely">';
+    var shown = out.count > 1000 ? out.likely.slice(0, 24) : out.likely;
+    var max = shown.length ? shown[0].p : 1;
+    shown.forEach(function (l) {
+      ch += '<li><span class="w">' + l.word + '</span><span class="track"><span class="fill" style="width:' +
+            Math.max(2, l.p / max * 100).toFixed(1) + '%"></span></span><span class="p">' + pct(l.p) + "</span></li>";
+    });
+    ch += "</ul>";
+    if (out.count > shown.length) ch += '<p class="hint">按可能性排前 ' + shown.length + " 个，其余 " +
+      (out.count - shown.length).toLocaleString("en-US") + " 个可能性更低，多是生僻词或复数。</p>";
+    cand.innerHTML = ch;
+  }
+
+  function setProgress(f) {
+    var p = $("progress");
+    if (f === null) { p.hidden = true; return; }
+    p.hidden = false;
+    $("progress-bar").style.width = Math.round(f * 100) + "%";
+  }
+
+  function history() { return rows.map(function (r) { return { word: r.word, code: codeOf(r.colors) }; }); }
+
+  // the opener is fixed (best in the backtest); its card shows backtest numbers instead of one-step estimates
+  function decorate(out) {
+    if (!rows.length && out.rec.length) {
+      out.rec[0].sim = OPENERS.salet;
+      out.rec = [out.rec[0], { word: "tares", bits: 0, pwin: 0, sim: OPENERS.tares }];
+    }
+    return out;
+  }
+
+  function solve() {
+    var id = ++reqId;
+    var first = !rows.length;
+    setProgress(first ? null : 0);
+    var msg = { type: "solve", id: id, history: history(), forced: first ? "salet" : null, noRank: first };
+    if (worker) { worker.postMessage(msg); return; }
+    setTimeout(function () {
+      var out = ENGINE.solve(msg.history, { top: 5, likely: 90, forced: msg.forced, noRank: msg.noRank });
+      if (id === reqId) { setProgress(null); renderResult(decorate(out)); }
+    }, 30);
+  }
+
+  function fill(w) {
+    $("word").value = w.toUpperCase();
+    draftColors = [0, 0, 0, 0, 0];
+    renderDraft();
+    $("word").focus();
+  }
+
+  $("word").addEventListener("input", function () {
+    var clean = this.value.toUpperCase().replace(/[^A-Z]/g, "").slice(0, 5);
+    if (clean !== this.value) this.value = clean;
+    showMsg("");
+    renderDraft();
+  });
+  $("entry").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var w = $("word").value.toLowerCase();
+    if (!/^[a-z]{5}$/.test(w)) { showMsg("需要正好 5 个英文字母。"); return; }
+    var solved = draftColors.every(function (c) { return c === 2; });
+    rows.push({ word: w, colors: draftColors.slice() });
+    save();
+    $("word").value = "";
+    draftColors = [0, 0, 0, 0, 0];
+    if (solved) {
+      var day = today(), m = loadSolved();
+      m[day] = w; saveSolved(m);
+      showMsg("猜中了！已把 " + w.toUpperCase() + " 记为今天（" + day + "）的答案，明天起会算进历史。", "这不是今天的答案", function () {
+        var m2 = loadSolved(); delete m2[day]; saveSolved(m2); showMsg("已删掉这条记录。");
+      });
+    } else {
+      showMsg(inList(w) ? "" : "“" + w.toUpperCase() + "”不在词库里，已照样按颜色过滤。");
+    }
+    renderRows(); renderDraft(); solve();
+  });
+  $("use-rec").addEventListener("click", function () { if (lastRec) fill(lastRec); });
+  $("undo").addEventListener("click", function () { rows.pop(); save(); renderRows(); solve(); });
+  $("reset").addEventListener("click", function () { rows = []; save(); showMsg(""); renderRows(); solve(); });
+  $("sample").addEventListener("click", function () {
+    rows = SAMPLE.map(function (r) { return { word: r.word, colors: r.colors.slice() }; });
+    save(); showMsg(""); renderRows(); solve();
+  });
+
+  var inListCache = null;
+  function inList(w) {
+    if (!inListCache) { inListCache = {}; for (var i = 0; i < WORDS.length; i += 5) inListCache[WORDS.substr(i, 5)] = 1; }
+    return !!inListCache[w];
+  }
+
+  var src = $("engine-src").textContent;
+  try {
+    worker = new Worker(URL.createObjectURL(new Blob([src], { type: "text/javascript" })));
+    worker.onmessage = function (e) {
+      var d = e.data;
+      if (d.id !== reqId) return;
+      if (d.type === "progress") setProgress(d.f);
+      else { setProgress(null); renderResult(decorate(d)); }
+    };
+    worker.onerror = function () { worker = null; startLocal(); solve(); };
+    worker.postMessage({ type: "init", words: WORDS, weights: PRIOR.w });
+  } catch (err) {
+    worker = null; startLocal();
+  }
+  function startLocal() {
+    if (window.ENGINE) return;
+    var s = document.createElement("script");
+    s.textContent = src.split("self.onmessage")[0];
+    document.body.appendChild(s);
+    ENGINE.init(WORDS, PRIOR.w);
+  }
+
+  renderRows(); renderDraft(); solve();
+})();
+</script>

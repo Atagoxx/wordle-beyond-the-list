@@ -1,0 +1,47 @@
+[
+ {
+  "prior": "Jev plain: 'common everyday word' (no rules, no 'Wordle')",
+  "auc": 0.877702626428527,
+  "answers_in_top_2315": 1289
+ },
+ {
+  "prior": "Jev + rules (no plurals / obscure words), no 'Wordle'",
+  "auc": 0.9114249934791742,
+  "answers_in_top_2315": 1662
+ },
+ {
+  "prior": "wordfreq Zipf frequency (free)",
+  "auc": 0.9218757847031054,
+  "answers_in_top_2315": 1451
+ },
+ {
+  "prior": "Jev + rules + 'could be a Wordle answer'",
+  "auc": 0.9613824434441228,
+  "answers_in_top_2315": 1813
+ },
+ {
+  "prior": "Jev, Wordle explained, Noul: 'on the solution list?'",
+  "auc": 0.9299040511402984,
+  "answers_in_top_2315": 1586
+ },
+ {
+  "prior": "Jev, Wordle explained, 5-level Score",
+  "auc": 0.9760999118193844,
+  "answers_in_top_2315": 1909
+ },
+ {
+  "prior": "rank sum: Jev plain + wordfreq",
+  "auc": 0.9192300824998465,
+  "answers_in_top_2315": 1445
+ },
+ {
+  "prior": "rank sum: Jev rules+'Wordle' + wordfreq",
+  "auc": 0.9688386201506994,
+  "answers_in_top_2315": 1827
+ },
+ {
+  "prior": "rank sum: explained Score + rules+'Wordle' + wordfreq (tool)",
+  "auc": 0.9789873963127896,
+  "answers_in_top_2315": 1935
+ }
+]

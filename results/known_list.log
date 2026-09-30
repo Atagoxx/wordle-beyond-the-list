@@ -1,0 +1,6 @@
+Highest-information openers: soare(5.886), roate(5.883), raise(5.878), raile(5.866), reast(5.865), slate(5.856), crate(5.835), salet(5.835)
+naive filter (guess first possible word), CRANE  avg 3.9490  worst 9  dist {1: 1, 2: 141, 3: 700, 4: 849, 5: 441, 6: 139, 7: 31, 8: 10, 9: 3}  (2s)
+greedy entropy                                   avg 3.4644  worst 6  dist {2: 44, 3: 1217, 4: 990, 5: 63, 6: 1}  (20s)
+greedy entropy, CRANE                            avg 3.4384  worst 6  dist {1: 1, 2: 70, 3: 1214, 4: 974, 5: 55, 6: 1}  (36s)
+entropy + win chance, CRANE                      avg 3.4389  worst 6  dist {1: 1, 2: 84, 3: 1237, 4: 888, 5: 101, 6: 4}  (51s)
+lookahead search, CRANE                          avg 3.4255  worst 5  dist {1: 1, 2: 76, 3: 1227, 4: 959, 5: 52}  (971s)

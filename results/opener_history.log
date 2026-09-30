@@ -1,0 +1,14 @@
+SLATE  expected under the 2025-01-01 prior 3.1545  | real answers: all 3.087  2025 3.044  2026 3.146  over 6: 1
+REAST  expected under the 2025-01-01 prior 3.1557  | real answers: all 3.130  2025 3.088  2026 3.187  over 6: 0
+SALET  expected under the 2025-01-01 prior 3.1568  | real answers: all 3.098  2025 3.071  2026 3.134  over 6: 0
+RAISE  expected under the 2025-01-01 prior 3.1804  | real answers: all 3.139  2025 3.129  2026 3.153  over 6: 2
+CRANE  expected under the 2025-01-01 prior 3.1814  | real answers: all 3.137  2025 3.112  2026 3.172  over 6: 1
+CRATE  expected under the 2025-01-01 prior 3.1858  | real answers: all 3.123  2025 3.101  2026 3.153  over 6: 2
+TRACE  expected under the 2025-01-01 prior 3.1862  | real answers: all 3.117  2025 3.074  2026 3.175  over 6: 1
+RATES  expected under the 2025-01-01 prior 3.1918  | real answers: all 3.175  2025 3.140  2026 3.224  over 6: 0
+SOARE  expected under the 2025-01-01 prior 3.1923  | real answers: all 3.142  2025 3.148  2026 3.134  over 6: 0
+ROATE  expected under the 2025-01-01 prior 3.1947  | real answers: all 3.133  2025 3.093  2026 3.187  over 6: 2
+TARES  expected under the 2025-01-01 prior 3.1954  | real answers: all 3.177  2025 3.134  2026 3.235  over 6: 0
+LARES  expected under the 2025-01-01 prior 3.2128  | real answers: all 3.141  2025 3.107  2026 3.187  over 6: 0
+rank correlation, prior estimate vs real backtest: 0.70
+1006s

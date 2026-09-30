@@ -1,0 +1,10 @@
+2021-06-19 .. 2026-09-25: 1925 days, 1900 distinct answers
+year    days   outside original list   repeats   examples outside the list
+2021     196                       0         0   
+2022     365                       0         0   
+2023     365                       4         0   guano, snafu, balsa, kazoo
+2024     366                       6         0   laser, pious, beaut, mommy, primp, uvula
+2025     365                      19         0   atlas, squid, indie, spate, suede, grift, taupe, atria
+2026     268                      32        25   sitar, oomph, mooch, shred, hydra, gunky, oasis, carom
+first repeat: {'date': '2026-02-02', 'word': 'cigar', 'first_used': '2021-06-19'}; repeats so far: 25
+original-list words never used yet: 476

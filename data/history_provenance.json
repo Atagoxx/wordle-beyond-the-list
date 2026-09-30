@@ -1,0 +1,16 @@
+{
+  "archived_on": "2026-09-27",
+  "canonical_history": "nyt_history.json",
+  "files": {
+    "nyt_history.json": {
+      "sha256": "e9b4f1592b313cf03e8784c602d117ab49024834d7ad880a318a96d0230a4187",
+      "bytes": 194486,
+      "days": 1925,
+      "first_day": "2021-06-19",
+      "last_day": "2026-09-25",
+      "role": "Canonical input for all final follow-up conclusions; unmodified snapshot.",
+      "source": "Snapshot of the NYT endpoint, collected with experiments/fetch_history.py"
+    }
+  },
+  "alternative_difference_count": 51
+}

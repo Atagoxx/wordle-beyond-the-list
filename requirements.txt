@@ -1,0 +1,7 @@
+numpy>=1.26
+# quarterly temporal-prior fitting in experiments/temporal_prior.py
+scipy>=1.11
+# only to regenerate data/priors/wordfreq_zipf.json
+wordfreq>=3.1
+# only for the paid Jev experiments (jev_score_words.py, jev_player.py); needs TYPESAFE_API_KEY
+typesafe-sdk>=0.7.1

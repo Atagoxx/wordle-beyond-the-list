@@ -1,0 +1,24 @@
+T0    2025  365 days  avg 3.451 (days the answer was findable)  not found 19  over 6: 0  solved in <=3: 54.0%
+T0    2026  268 days  avg 3.534 (days the answer was findable)  not found 32  over 6: 0  solved in <=3: 44.8%
+T0    all   633 days  avg 3.485 (days the answer was findable)  not found 51  over 6: 0  solved in <=3: 50.1%
+T1    2025  365 days  avg 3.133 (days the answer was findable)  not found 19  over 6: 0  solved in <=3: 75.3%
+T1    2026  268 days  avg 3.019 (days the answer was findable)  not found 57  over 6: 0  solved in <=3: 67.2%
+T1    all   633 days  avg 3.090 (days the answer was findable)  not found 76  over 6: 0  solved in <=3: 71.9%
+P0    2025  365 days  avg 3.540 (days the answer was findable)  not found 0  over 6: 0  solved in <=3: 50.7%
+P0    2026  268 days  avg 3.642 (days the answer was findable)  not found 0  over 6: 0  solved in <=3: 44.4%
+P0    all   633 days  avg 3.583 (days the answer was findable)  not found 0  over 6: 0  solved in <=3: 48.0%
+P2    2025  365 days  avg 3.134 (days the answer was findable)  not found 0  over 6: 0  solved in <=3: 80.3%
+P2    2026  268 days  avg 3.235 (days the answer was findable)  not found 0  over 6: 0  solved in <=3: 72.4%
+P2    all   633 days  avg 3.177 (days the answer was findable)  not found 0  over 6: 0  solved in <=3: 76.9%
+P2s   2025  365 days  avg 3.071 (days the answer was findable)  not found 0  over 6: 0  solved in <=3: 82.5%
+P2s   2026  268 days  avg 3.134 (days the answer was findable)  not found 0  over 6: 0  solved in <=3: 75.0%
+P2s   all   633 days  avg 3.098 (days the answer was findable)  not found 0  over 6: 0  solved in <=3: 79.3%
+2025 T1 - T0 on 346 days both could solve: -0.318  95% CI [-0.380, -0.256]  fewer/same/more [114, 219, 13]
+2026 T1 - T0 on 211 days both could solve: -0.526  95% CI [-0.619, -0.434]  fewer/same/more [106, 96, 9]
+2025 P0 - T0 on 346 days both could solve: +0.090  95% CI [+0.005, +0.174]  fewer/same/more [74, 172, 100]
+2026 P0 - T0 on 236 days both could solve: +0.093  95% CI [+0.006, +0.180]  fewer/same/more [38, 139, 59]
+2025 P2 - T0 on 346 days both could solve: -0.361  95% CI [-0.439, -0.283]  fewer/same/more [139, 176, 31]
+2026 P2 - T0 on 236 days both could solve: -0.407  95% CI [-0.506, -0.307]  fewer/same/more [107, 104, 25]
+2025 P2s - T0 on 346 days both could solve: -0.422  95% CI [-0.493, -0.351]  fewer/same/more [148, 179, 19]
+2026 P2s - T0 on 236 days both could solve: -0.496  95% CI [-0.586, -0.406]  fewer/same/more [119, 103, 14]
+163s

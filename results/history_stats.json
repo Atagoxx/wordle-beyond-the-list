@@ -1,0 +1,208 @@
+{
+ "range": [
+  "2021-06-19",
+  "2026-09-25"
+ ],
+ "per_year": {
+  "2021": {
+   "days": 196,
+   "outside_original": 0,
+   "repeat": 0,
+   "not_accepted_guess": 0,
+   "outside_examples": []
+  },
+  "2022": {
+   "days": 365,
+   "outside_original": 0,
+   "repeat": 0,
+   "not_accepted_guess": 0,
+   "outside_examples": []
+  },
+  "2023": {
+   "days": 365,
+   "outside_original": 4,
+   "repeat": 0,
+   "not_accepted_guess": 0,
+   "outside_examples": [
+    "guano",
+    "snafu",
+    "balsa",
+    "kazoo"
+   ]
+  },
+  "2024": {
+   "days": 366,
+   "outside_original": 6,
+   "repeat": 0,
+   "not_accepted_guess": 0,
+   "outside_examples": [
+    "laser",
+    "pious",
+    "beaut",
+    "mommy",
+    "primp",
+    "uvula"
+   ]
+  },
+  "2025": {
+   "days": 365,
+   "outside_original": 19,
+   "repeat": 0,
+   "not_accepted_guess": 0,
+   "outside_examples": [
+    "atlas",
+    "squid",
+    "indie",
+    "spate",
+    "suede",
+    "grift",
+    "taupe",
+    "atria"
+   ]
+  },
+  "2026": {
+   "days": 268,
+   "outside_original": 32,
+   "repeat": 25,
+   "not_accepted_guess": 0,
+   "outside_examples": [
+    "sitar",
+    "oomph",
+    "mooch",
+    "shred",
+    "hydra",
+    "gunky",
+    "oasis",
+    "carom"
+   ]
+  }
+ },
+ "repeats": [
+  {
+   "date": "2026-02-02",
+   "word": "cigar",
+   "first_used": "2021-06-19"
+  },
+  {
+   "date": "2026-02-17",
+   "word": "squad",
+   "first_used": "2022-04-11"
+  },
+  {
+   "date": "2026-02-21",
+   "word": "awake",
+   "first_used": "2021-06-23"
+  },
+  {
+   "date": "2026-03-03",
+   "word": "linen",
+   "first_used": "2021-08-09"
+  },
+  {
+   "date": "2026-03-15",
+   "word": "grade",
+   "first_used": "2021-07-04"
+  },
+  {
+   "date": "2026-03-27",
+   "word": "ivory",
+   "first_used": "2021-08-17"
+  },
+  {
+   "date": "2026-03-30",
+   "word": "comet",
+   "first_used": "2021-10-19"
+  },
+  {
+   "date": "2026-04-04",
+   "word": "sandy",
+   "first_used": "2024-10-27"
+  },
+  {
+   "date": "2026-04-19",
+   "word": "stand",
+   "first_used": "2021-08-15"
+  },
+  {
+   "date": "2026-05-02",
+   "word": "bring",
+   "first_used": "2021-11-30"
+  },
+  {
+   "date": "2026-05-12",
+   "word": "clock",
+   "first_used": "2021-11-26"
+  },
+  {
+   "date": "2026-05-21",
+   "word": "agree",
+   "first_used": "2021-08-28"
+  },
+  {
+   "date": "2026-05-30",
+   "word": "smile",
+   "first_used": "2023-09-27"
+  },
+  {
+   "date": "2026-06-07",
+   "word": "thumb",
+   "first_used": "2021-10-12"
+  },
+  {
+   "date": "2026-06-12",
+   "word": "break",
+   "first_used": "2021-12-08"
+  },
+  {
+   "date": "2026-06-26",
+   "word": "acute",
+   "first_used": "2021-12-26"
+  },
+  {
+   "date": "2026-07-03",
+   "word": "baton",
+   "first_used": "2021-12-19"
+  },
+  {
+   "date": "2026-07-13",
+   "word": "stout",
+   "first_used": "2021-08-23"
+  },
+  {
+   "date": "2026-07-30",
+   "word": "flume",
+   "first_used": "2021-08-26"
+  },
+  {
+   "date": "2026-08-06",
+   "word": "gripe",
+   "first_used": "2021-12-23"
+  },
+  {
+   "date": "2026-08-07",
+   "word": "feign",
+   "first_used": "2021-07-08"
+  },
+  {
+   "date": "2026-08-21",
+   "word": "trace",
+   "first_used": "2021-12-15"
+  },
+  {
+   "date": "2026-08-25",
+   "word": "click",
+   "first_used": "2021-10-31"
+  },
+  {
+   "date": "2026-09-13",
+   "word": "focus",
+   "first_used": "2022-03-13"
+  },
+  {
+   "date": "2026-09-23",
+   "word": "forth",
+   "first_used": "2021-08-13"
+  }
+ ],
+ "unused_original_count": 476
+}

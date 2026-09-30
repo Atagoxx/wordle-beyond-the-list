@@ -1,0 +1,22 @@
+# generated caches (build with the scripts)
+cache/
+*.npy
+__pycache__/
+*.pyc
+
+# The pinned historical inputs are tracked for reproducibility.
+
+# built web page
+dist/
+
+# secrets / local env
+.env
+.env.*
+*.key
+
+# editor / OS / agent files
+.DS_Store
+.vscode/
+.idea/
+.claude/
+*.log.tmp

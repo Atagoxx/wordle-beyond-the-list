@@ -1,0 +1,9 @@
+Jev plain: 'common everyday word' (no rules, no 'Wordle')      AUC 0.8777   true answers among its top 2,315: 1289
+Jev + rules (no plurals / obscure words), no 'Wordle'          AUC 0.9114   true answers among its top 2,315: 1662
+wordfreq Zipf frequency (free)                                 AUC 0.9219   true answers among its top 2,315: 1451
+Jev + rules + 'could be a Wordle answer'                       AUC 0.9614   true answers among its top 2,315: 1813
+Jev, Wordle explained, Noul: 'on the solution list?'           AUC 0.9299   true answers among its top 2,315: 1586
+Jev, Wordle explained, 5-level Score                           AUC 0.9761   true answers among its top 2,315: 1909
+rank sum: Jev plain + wordfreq                                 AUC 0.9192   true answers among its top 2,315: 1445
+rank sum: Jev rules+'Wordle' + wordfreq                        AUC 0.9688   true answers among its top 2,315: 1827
+rank sum: explained Score + rules+'Wordle' + wordfreq (tool)   AUC 0.9790   true answers among its top 2,315: 1935

@@ -1,0 +1,4513 @@
+{
+  "exploratory": true,
+  "caution": "Same historical data already inspected; descriptive paired intervals, not an independent holdout claim.",
+  "date_start": "2025-01-01",
+  "date_end": "2026-09-25",
+  "population_days": 633,
+  "sample_days": 96,
+  "seed": 20260927,
+  "history_source": "User-uploaded original nyt_history.json, 2021-06-19 through 2026-09-25",
+  "history_sha256": "e9b4f1592b313cf03e8784c602d117ab49024834d7ad880a318a96d0230a4187",
+  "sampling": "Python random.Random(seed).sample uniformly without replacement; then chronological sorting",
+  "prior": "P2s history-aware",
+  "opener": "salet",
+  "coefficients": [
+    0.55,
+    0.1
+  ],
+  "max_turns": 12,
+  "days": [
+    "2025-01-08",
+    "2025-01-13",
+    "2025-01-24",
+    "2025-01-30",
+    "2025-02-03",
+    "2025-02-04",
+    "2025-02-06",
+    "2025-02-08",
+    "2025-02-15",
+    "2025-02-18",
+    "2025-02-26",
+    "2025-03-13",
+    "2025-03-14",
+    "2025-03-15",
+    "2025-03-16",
+    "2025-03-21",
+    "2025-03-22",
+    "2025-03-29",
+    "2025-04-11",
+    "2025-04-19",
+    "2025-04-20",
+    "2025-04-23",
+    "2025-04-25",
+    "2025-04-26",
+    "2025-04-28",
+    "2025-05-01",
+    "2025-05-04",
+    "2025-05-11",
+    "2025-05-14",
+    "2025-05-15",
+    "2025-05-17",
+    "2025-05-22",
+    "2025-05-26",
+    "2025-06-04",
+    "2025-06-13",
+    "2025-07-05",
+    "2025-07-07",
+    "2025-07-09",
+    "2025-07-11",
+    "2025-07-19",
+    "2025-07-20",
+    "2025-07-25",
+    "2025-07-29",
+    "2025-08-09",
+    "2025-08-27",
+    "2025-08-31",
+    "2025-09-02",
+    "2025-09-18",
+    "2025-09-23",
+    "2025-10-06",
+    "2025-10-17",
+    "2025-10-27",
+    "2025-11-12",
+    "2025-11-15",
+    "2025-11-17",
+    "2025-11-21",
+    "2025-11-22",
+    "2025-11-27",
+    "2025-12-08",
+    "2025-12-25",
+    "2025-12-26",
+    "2026-01-06",
+    "2026-01-27",
+    "2026-02-03",
+    "2026-02-19",
+    "2026-02-21",
+    "2026-03-09",
+    "2026-03-11",
+    "2026-03-13",
+    "2026-03-14",
+    "2026-04-02",
+    "2026-04-07",
+    "2026-04-09",
+    "2026-04-11",
+    "2026-04-18",
+    "2026-04-19",
+    "2026-04-22",
+    "2026-05-07",
+    "2026-05-08",
+    "2026-05-14",
+    "2026-05-20",
+    "2026-05-21",
+    "2026-05-22",
+    "2026-05-27",
+    "2026-06-01",
+    "2026-06-10",
+    "2026-06-18",
+    "2026-06-24",
+    "2026-06-29",
+    "2026-07-06",
+    "2026-07-09",
+    "2026-08-10",
+    "2026-08-31",
+    "2026-09-04",
+    "2026-09-18",
+    "2026-09-21"
+  ],
+  "summary": {
+    "baseline": {
+      "days": 96,
+      "solved": 96,
+      "avg_solved": 3.1145833333333335,
+      "total_guesses_solved": 299,
+      "distribution_solved": {
+        "2": 11,
+        "3": 65,
+        "4": 18,
+        "5": 2
+      },
+      "failed_within_6": 0,
+      "not_found": 0,
+      "capped_at_12": 0,
+      "solved_le3_fraction": 0.7916666666666666,
+      "decisions_compared": 0,
+      "decision_changes": 0,
+      "games_with_decision_changes": 0
+    },
+    "branch": {
+      "days": 96,
+      "solved": 96,
+      "avg_solved": 3.1458333333333335,
+      "total_guesses_solved": 302,
+      "distribution_solved": {
+        "2": 8,
+        "3": 68,
+        "4": 18,
+        "5": 2
+      },
+      "failed_within_6": 0,
+      "not_found": 0,
+      "capped_at_12": 0,
+      "solved_le3_fraction": 0.7916666666666666,
+      "decisions_compared": 206,
+      "decision_changes": 19,
+      "games_with_decision_changes": 19
+    },
+    "conditional": {
+      "days": 96,
+      "solved": 96,
+      "avg_solved": 3.1458333333333335,
+      "total_guesses_solved": 302,
+      "distribution_solved": {
+        "2": 9,
+        "3": 67,
+        "4": 17,
+        "5": 3
+      },
+      "failed_within_6": 0,
+      "not_found": 0,
+      "capped_at_12": 0,
+      "solved_le3_fraction": 0.7916666666666666,
+      "decisions_compared": 206,
+      "decision_changes": 12,
+      "games_with_decision_changes": 12
+    }
+  },
+  "paired": {
+    "branch": {
+      "reference": "baseline",
+      "both_solved_days": 96,
+      "mean_turn_difference": 0.03125,
+      "descriptive_normal_ci95": [
+        -0.022686132227377254,
+        0.08518613222737725
+      ],
+      "net_turns_saved": -3,
+      "fewer_same_more": [
+        2,
+        89,
+        5
+      ]
+    },
+    "conditional": {
+      "reference": "baseline",
+      "both_solved_days": 96,
+      "mean_turn_difference": 0.03125,
+      "descriptive_normal_ci95": [
+        -0.022686132227377254,
+        0.08518613222737725
+      ],
+      "net_turns_saved": -3,
+      "fewer_same_more": [
+        2,
+        89,
+        5
+      ]
+    }
+  },
+  "reference_baseline": {
+    "path": "/workspace/scratch/7efc9574ab0b/wordle-beyond-optimal/results/backtest_days.json",
+    "available": true,
+    "checked_days": 96,
+    "mismatch_count": 0,
+    "mismatches": []
+  },
+  "decision_changes_definition": "Alternative versus original-rule action at each state actually reached by the alternative; excludes fixed opener.",
+  "per_day": {
+    "baseline": {
+      "2025-01-08": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "draft"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-01-13": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "corni",
+          "cloak"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-02-03": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cerne",
+          "revue"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-02-04": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "routh",
+          "booth",
+          "tooth"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-01-24": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cerne",
+          "crepe"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-01-30": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "false"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-02-06": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "murid",
+          "pupil"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-02-08": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "steep"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-02-26": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "crowd",
+          "award"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-03-13": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "abhor",
+          "chase"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-03-14": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gerne",
+          "piece"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-03-15": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "lance",
+          "ladle"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-03-16": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "stack",
+          "stamp"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-03-21": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gerne",
+          "nudge"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-03-22": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gnarl",
+          "plead",
+          "amble"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-03-29": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cronk",
+          "sorry"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-02-15": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "crook"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-02-18": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cerne",
+          "knife",
+          "indie"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-04-11": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "crony",
+          "arrow"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-04-19": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "known",
+          "inbox"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-04-25": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "known"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-04-26": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "clash"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-04-28": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "dumpy",
+          "dummy"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-01": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "adept"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-04-20": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "corby",
+          "patch"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-04-23": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cerne",
+          "ozone"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-04": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "trigo",
+          "trout"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-11": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "livor",
+          "bowel",
+          "dowel"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-17": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "grown"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-22": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "midgy",
+          "folio"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-26": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cerne",
+          "drone"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-06-04": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "arise",
+          "cease"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-06-13": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cello",
+          "bulge",
+          "bilge"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-07-05": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "paler",
+          "baler"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-14": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "bongo"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-15": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gormy",
+          "eager"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-07-07": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "spilt",
+          "stilt"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-07-09": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "livor",
+          "novel"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-07-20": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "corni",
+          "blank"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-07-25": {
+        "turns": 5,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "nidor",
+          "mower",
+          "roger",
+          "gofer"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-07-11": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "crony",
+          "brand"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-07-19": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "powny",
+          "sword"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-07-29": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "dearn",
+          "awoke",
+          "omega"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-08-09": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "basil",
+          "nasal"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-08-27": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "tower"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-08-31": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "petal"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-09-23": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "north",
+          "mouth"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-10-06": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "arise",
+          "abuse",
+          "amuse"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-09-02": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "toing",
+          "fight",
+          "might"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-09-18": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cerne",
+          "knife"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-10-17": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "hoiks",
+          "gross"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-10-27": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "tribe",
+          "fetid"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-11-12": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "genre",
+          "deuce"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-11-15": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "drony",
+          "clung"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-11-17": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "corni",
+          "clamp"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-11-21": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "livor",
+          "vowel"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-11-22": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cutin",
+          "thick"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-11-27": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "erect",
+          "remit"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-12-08": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "crony",
+          "gravy"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-12-25": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "hoiks",
+          "prism"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-12-26": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "pheer",
+          "speed"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-01-06": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "woody",
+          "oomph"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-02-19": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "hoist"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-02-21": {
+        "turns": 5,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "dearn",
+          "amaze",
+          "agave",
+          "awake"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-01-27": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "husky",
+          "dusky"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-02-03": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "genre",
+          "weigh"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-03-09": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "hasty"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-03-11": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "tribe",
+          "teddy"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-03-13": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "tamer",
+          "eaten"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-03-14": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "penal",
+          "ankle"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-04-02": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "pheer",
+          "sober"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-04-07": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cerne",
+          "dense"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-04-09": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "laden"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-04-11": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "genre",
+          "crude",
+          "prude"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-04-18": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "aunty",
+          "today",
+          "toady"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-04-19": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "pirns",
+          "stand"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-04-22": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "snipe",
+          "snore"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-05-07": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "genre",
+          "fudge",
+          "budge"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-05-08": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "crony",
+          "wharf",
+          "umbra"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-05-14": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gyron",
+          "waver"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-05-22": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "corni",
+          "vocal"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-05-27": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "yoick",
+          "stuff"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-05-20": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "genre",
+          "wreck"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-05-21": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "aider",
+          "agree"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-06-01": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "drony",
+          "chili"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-06-10": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "corni",
+          "align"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-06-18": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "tribe",
+          "entry"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-06-24": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "nidor",
+          "queer"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-07-09": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "brand",
+          "amend"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-08-10": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "snipe"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-06-29": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "genre",
+          "crude"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-07-06": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "north",
+          "motif",
+          "toddy"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-09-18": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "yupon",
+          "snowy"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-09-21": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gormy",
+          "rewed",
+          "pager"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-08-31": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "bound",
+          "mound"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-09-04": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gormy",
+          "wager"
+        ],
+        "decisions_compared": 0,
+        "decision_changes": 0,
+        "changed_decisions": []
+      }
+    },
+    "branch": {
+      "2025-01-08": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "draft"
+        ],
+        "decisions_compared": 1,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-01-13": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "corni",
+          "cloak"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-01-24": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cerne",
+          "crepe"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-01-30": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "false"
+        ],
+        "decisions_compared": 1,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-02-06": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "murid",
+          "pupil"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-02-08": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "steep"
+        ],
+        "decisions_compared": 1,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-02-03": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gerne",
+          "revue"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 715,
+            "selected": "gerne",
+            "baseline_at_same_state": "cerne"
+          }
+        ]
+      },
+      "2025-02-04": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "routh",
+          "booth",
+          "tooth"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-02-26": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "crony",
+          "award"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 583,
+            "selected": "crony",
+            "baseline_at_same_state": "crowd"
+          }
+        ]
+      },
+      "2025-03-13": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "abhor",
+          "chase"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-02-15": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "duroc",
+          "crook"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 865,
+            "selected": "duroc",
+            "baseline_at_same_state": "cornu"
+          }
+        ]
+      },
+      "2025-02-18": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gerne",
+          "knife",
+          "indie"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 715,
+            "selected": "gerne",
+            "baseline_at_same_state": "cerne"
+          }
+        ]
+      },
+      "2025-03-14": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gerne",
+          "piece"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-03-15": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "lance",
+          "ladle"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-03-16": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "stack",
+          "stamp"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-03-21": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gerne",
+          "nudge"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-03-22": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gnarl",
+          "plead",
+          "amble"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-03-29": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cronk",
+          "sorry"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-04-11": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "crony",
+          "arrow"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-04-19": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "known",
+          "inbox"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-04-20": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "corby",
+          "patch"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-04-23": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cerne",
+          "opine",
+          "ozone"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 3,
+            "candidates": 16,
+            "selected": "opine",
+            "baseline_at_same_state": "ozone"
+          }
+        ]
+      },
+      "2025-04-25": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "known"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-04-26": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "clasp",
+          "clash"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 99,
+            "selected": "clasp",
+            "baseline_at_same_state": "clash"
+          }
+        ]
+      },
+      "2025-04-28": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "dumpy",
+          "dummy"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-01": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "adept"
+        ],
+        "decisions_compared": 1,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-04": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "trigo",
+          "trout"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-11": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "livor",
+          "bowel",
+          "dowel"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-14": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "bongo"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-15": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gormy",
+          "eager"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-17": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "grown"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-22": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "midgy",
+          "folio"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-26": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cerne",
+          "drone"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-06-04": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "roams",
+          "cease"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 111,
+            "selected": "roams",
+            "baseline_at_same_state": "arise"
+          }
+        ]
+      },
+      "2025-06-13": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cogie",
+          "bilge"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 57,
+            "selected": "cogie",
+            "baseline_at_same_state": "cello"
+          }
+        ]
+      },
+      "2025-07-05": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "paler",
+          "baler"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-07-07": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "spilt",
+          "stilt"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-07-09": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "livor",
+          "novel"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-07-11": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "crony",
+          "brand"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-07-19": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "powny",
+          "sword"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-07-20": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "corni",
+          "blank"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-07-25": {
+        "turns": 5,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "nidor",
+          "mower",
+          "roger",
+          "gofer"
+        ],
+        "decisions_compared": 4,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-07-29": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "dearn",
+          "awoke",
+          "omega"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-08-09": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "basil",
+          "nasal"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-08-27": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "orpin",
+          "tower"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 113,
+            "selected": "orpin",
+            "baseline_at_same_state": "tower"
+          }
+        ]
+      },
+      "2025-08-31": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "petal"
+        ],
+        "decisions_compared": 1,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-09-23": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "north",
+          "mouth"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-10-06": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "amirs",
+          "amuse"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 111,
+            "selected": "amirs",
+            "baseline_at_same_state": "arise"
+          }
+        ]
+      },
+      "2025-09-02": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "toing",
+          "fight",
+          "might"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-09-18": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cerne",
+          "knife"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-10-17": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "hoiks",
+          "gross"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-10-27": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "tribe",
+          "fetid"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-11-12": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "genre",
+          "deuce"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-11-15": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "drony",
+          "clung"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-11-17": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "corni",
+          "clamp"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-11-21": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "livor",
+          "vowel"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-11-22": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cutin",
+          "thick"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-11-27": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "micro",
+          "remit"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 62,
+            "selected": "micro",
+            "baseline_at_same_state": "erect"
+          }
+        ]
+      },
+      "2025-12-08": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "crony",
+          "gravy"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-12-25": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "hoiks",
+          "prism"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-12-26": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "pheer",
+          "speed"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-01-06": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "moody",
+          "oomph"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 3,
+            "candidates": 74,
+            "selected": "moody",
+            "baseline_at_same_state": "woody"
+          }
+        ]
+      },
+      "2026-02-19": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "hoist"
+        ],
+        "decisions_compared": 1,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-02-21": {
+        "turns": 5,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "beard",
+          "amaze",
+          "agave",
+          "awake"
+        ],
+        "decisions_compared": 4,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 301,
+            "selected": "beard",
+            "baseline_at_same_state": "dearn"
+          }
+        ]
+      },
+      "2026-01-27": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "hoiks",
+          "dusky"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 824,
+            "selected": "hoiks",
+            "baseline_at_same_state": "husky"
+          }
+        ]
+      },
+      "2026-02-03": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "genre",
+          "weigh"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-03-09": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "hasty"
+        ],
+        "decisions_compared": 1,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-03-11": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "tribe",
+          "teddy"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-03-13": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "tamer",
+          "eaten"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-03-14": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gnarl",
+          "ankle"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 129,
+            "selected": "gnarl",
+            "baseline_at_same_state": "penal"
+          }
+        ]
+      },
+      "2026-04-02": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "pheer",
+          "sober"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-04-07": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cerne",
+          "dense"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-04-09": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "laden"
+        ],
+        "decisions_compared": 1,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-04-11": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "genre",
+          "crude",
+          "prude"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-04-18": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "tonga",
+          "today",
+          "toady"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 125,
+            "selected": "tonga",
+            "baseline_at_same_state": "aunty"
+          }
+        ]
+      },
+      "2026-04-19": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "pirns",
+          "stand"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-04-22": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "opine",
+          "snore"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 151,
+            "selected": "opine",
+            "baseline_at_same_state": "snipe"
+          }
+        ]
+      },
+      "2026-05-07": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "genre",
+          "fudge",
+          "budge"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-05-08": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "crony",
+          "wharf",
+          "umbra"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-05-14": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gyron",
+          "waver"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-05-22": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "corni",
+          "vocal"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-05-27": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "yoick",
+          "stuff"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-06-01": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "drony",
+          "chili"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-06-10": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "corni",
+          "align"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-05-20": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "genre",
+          "wreck"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-05-21": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "aider",
+          "agree"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-06-18": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "tribe",
+          "entry"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-06-24": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "nidor",
+          "freer",
+          "queer"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 3,
+            "candidates": 40,
+            "selected": "freer",
+            "baseline_at_same_state": "queer"
+          }
+        ]
+      },
+      "2026-07-09": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "brand",
+          "amend"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-08-10": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "penie",
+          "snipe"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 151,
+            "selected": "penie",
+            "baseline_at_same_state": "snipe"
+          }
+        ]
+      },
+      "2026-08-31": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "bound",
+          "mound"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-09-04": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gormy",
+          "wager"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-09-18": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "yupon",
+          "snowy"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-09-21": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gormy",
+          "rewed",
+          "pager"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-06-29": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "genre",
+          "crude"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-07-06": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "north",
+          "motif",
+          "toddy"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      }
+    },
+    "conditional": {
+      "2025-01-08": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "draft"
+        ],
+        "decisions_compared": 1,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-01-13": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "corni",
+          "cloak"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-01-24": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cerne",
+          "crepe"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-01-30": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "false"
+        ],
+        "decisions_compared": 1,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-02-03": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cerne",
+          "revue"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-02-04": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "routh",
+          "booth",
+          "tooth"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-02-06": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "murid",
+          "pupil"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-02-08": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "steep"
+        ],
+        "decisions_compared": 1,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-02-15": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "crook"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-02-18": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cerne",
+          "knife",
+          "indie"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-03-14": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gerne",
+          "piece"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-03-15": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "lance",
+          "ladle"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-02-26": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "crowd",
+          "award"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-03-13": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "abhor",
+          "chase"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-03-16": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "stack",
+          "stamp"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-03-21": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gerne",
+          "nudge"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-04-11": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "crony",
+          "arrow"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-04-19": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "known",
+          "inbox"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-03-22": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gnarl",
+          "plead",
+          "amble"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-03-29": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cronk",
+          "sorry"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-04-20": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "corby",
+          "patch"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-04-23": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cerne",
+          "opine",
+          "ozone"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 3,
+            "candidates": 16,
+            "selected": "opine",
+            "baseline_at_same_state": "ozone"
+          }
+        ]
+      },
+      "2025-04-28": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "dumpy",
+          "dummy"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-01": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "adept"
+        ],
+        "decisions_compared": 1,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-04": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "trigo",
+          "trout"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-11": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "livor",
+          "bowel",
+          "dowel"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-14": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "bongo"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-15": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gormy",
+          "eager"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-04-25": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "known"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-04-26": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "clash"
+        ],
+        "decisions_compared": 1,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-17": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "grown"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-22": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "midgy",
+          "folio"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-06-13": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cogie",
+          "bilge"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 57,
+            "selected": "cogie",
+            "baseline_at_same_state": "cello"
+          }
+        ]
+      },
+      "2025-07-05": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "paler",
+          "baler"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-07-07": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "spilt",
+          "stilt"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-07-09": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "livor",
+          "novel"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-07-11": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "crony",
+          "brand"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-07-19": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "powny",
+          "sword"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-07-20": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "corni",
+          "blank"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-07-25": {
+        "turns": 5,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "nidor",
+          "mower",
+          "roger",
+          "gofer"
+        ],
+        "decisions_compared": 4,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-05-26": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cerne",
+          "drone"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-06-04": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "amirs",
+          "cease"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 111,
+            "selected": "amirs",
+            "baseline_at_same_state": "arise"
+          }
+        ]
+      },
+      "2025-07-29": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "dearn",
+          "awoke",
+          "omega"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-08-09": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "basil",
+          "nasal"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-08-27": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "orpin",
+          "tower"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 113,
+            "selected": "orpin",
+            "baseline_at_same_state": "tower"
+          }
+        ]
+      },
+      "2025-08-31": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "petal"
+        ],
+        "decisions_compared": 1,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-09-02": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "toing",
+          "fight",
+          "might"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-09-18": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cerne",
+          "knife"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-10-17": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "hoiks",
+          "gross"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-10-27": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "tribe",
+          "fetid"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-09-23": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "north",
+          "mouth"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-10-06": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "amirs",
+          "amuse"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 111,
+            "selected": "amirs",
+            "baseline_at_same_state": "arise"
+          }
+        ]
+      },
+      "2025-11-17": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "corni",
+          "clamp"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-11-21": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "livor",
+          "vowel"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-11-12": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "genre",
+          "deuce"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-11-15": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "drony",
+          "clung"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-12-08": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "crony",
+          "gravy"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-12-25": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "hoiks",
+          "prism"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-11-22": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cutin",
+          "thick"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2025-11-27": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "micro",
+          "remit"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 62,
+            "selected": "micro",
+            "baseline_at_same_state": "erect"
+          }
+        ]
+      },
+      "2025-12-26": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "pheer",
+          "speed"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-01-06": {
+        "turns": 5,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "woody",
+          "gombo",
+          "oomph"
+        ],
+        "decisions_compared": 4,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 4,
+            "candidates": 6,
+            "selected": "gombo",
+            "baseline_at_same_state": "oomph"
+          }
+        ]
+      },
+      "2026-02-19": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "hoist"
+        ],
+        "decisions_compared": 1,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-02-21": {
+        "turns": 5,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "dearn",
+          "amaze",
+          "agave",
+          "awake"
+        ],
+        "decisions_compared": 4,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-03-09": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "hasty"
+        ],
+        "decisions_compared": 1,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-03-11": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "tribe",
+          "teddy"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-01-27": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "hoiks",
+          "dusky"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 824,
+            "selected": "hoiks",
+            "baseline_at_same_state": "husky"
+          }
+        ]
+      },
+      "2026-02-03": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "genre",
+          "weigh"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-03-13": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "tamer",
+          "eaten"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-03-14": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gnarl",
+          "ankle"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 129,
+            "selected": "gnarl",
+            "baseline_at_same_state": "penal"
+          }
+        ]
+      },
+      "2026-04-09": {
+        "turns": 2,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "laden"
+        ],
+        "decisions_compared": 1,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-04-11": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "genre",
+          "crude",
+          "prude"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-04-18": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "aunty",
+          "today",
+          "toady"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-04-19": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "pirns",
+          "stand"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-04-02": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "pheer",
+          "sober"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-04-07": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cerne",
+          "dense"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-04-22": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "opine",
+          "snore"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 151,
+            "selected": "opine",
+            "baseline_at_same_state": "snipe"
+          }
+        ]
+      },
+      "2026-05-07": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "genre",
+          "fudge",
+          "budge"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-05-20": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "genre",
+          "wreck"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-05-21": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "aider",
+          "agree"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-05-22": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "corni",
+          "vocal"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-05-27": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "yoick",
+          "stuff"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-06-01": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "drony",
+          "chili"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-06-10": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "corni",
+          "align"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-05-08": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "crony",
+          "wharf",
+          "umbra"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-05-14": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gyron",
+          "waver"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-06-18": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "tribe",
+          "entry"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-06-24": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "nidor",
+          "freer",
+          "queer"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 3,
+            "candidates": 40,
+            "selected": "freer",
+            "baseline_at_same_state": "queer"
+          }
+        ]
+      },
+      "2026-07-09": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "brand",
+          "amend"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-08-10": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "penie",
+          "snipe"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 1,
+        "changed_decisions": [
+          {
+            "turn": 2,
+            "candidates": 151,
+            "selected": "penie",
+            "baseline_at_same_state": "snipe"
+          }
+        ]
+      },
+      "2026-08-31": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "cornu",
+          "bound",
+          "mound"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-09-04": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gormy",
+          "wager"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-09-18": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "yupon",
+          "snowy"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-09-21": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "gormy",
+          "rewed",
+          "pager"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-06-29": {
+        "turns": 3,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "genre",
+          "crude"
+        ],
+        "decisions_compared": 2,
+        "decision_changes": 0,
+        "changed_decisions": []
+      },
+      "2026-07-06": {
+        "turns": 4,
+        "solved": true,
+        "not_found": false,
+        "capped": false,
+        "guesses": [
+          "salet",
+          "north",
+          "motif",
+          "toddy"
+        ],
+        "decisions_compared": 3,
+        "decision_changes": 0,
+        "changed_decisions": []
+      }
+    }
+  },
+  "elapsed_seconds": 19.435
+}

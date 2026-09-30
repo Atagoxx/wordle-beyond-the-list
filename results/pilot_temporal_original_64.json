@@ -1,0 +1,3897 @@
+{
+  "exploratory": true,
+  "independent_holdout": false,
+  "days": [
+    "2026-01-02",
+    "2026-01-04",
+    "2026-01-08",
+    "2026-01-10",
+    "2026-01-15",
+    "2026-01-18",
+    "2026-01-28",
+    "2026-01-29",
+    "2026-01-31",
+    "2026-02-02",
+    "2026-02-03",
+    "2026-02-04",
+    "2026-02-05",
+    "2026-02-06",
+    "2026-02-09",
+    "2026-02-16",
+    "2026-02-20",
+    "2026-02-22",
+    "2026-02-24",
+    "2026-02-25",
+    "2026-03-03",
+    "2026-03-07",
+    "2026-03-08",
+    "2026-03-14",
+    "2026-03-16",
+    "2026-03-23",
+    "2026-03-31",
+    "2026-04-05",
+    "2026-04-14",
+    "2026-04-19",
+    "2026-04-20",
+    "2026-04-30",
+    "2026-05-03",
+    "2026-05-07",
+    "2026-05-10",
+    "2026-05-14",
+    "2026-05-18",
+    "2026-05-31",
+    "2026-06-05",
+    "2026-06-06",
+    "2026-06-07",
+    "2026-06-08",
+    "2026-06-09",
+    "2026-06-10",
+    "2026-06-13",
+    "2026-06-20",
+    "2026-06-26",
+    "2026-06-28",
+    "2026-07-05",
+    "2026-07-14",
+    "2026-07-17",
+    "2026-07-21",
+    "2026-07-27",
+    "2026-07-31",
+    "2026-08-10",
+    "2026-08-13",
+    "2026-08-16",
+    "2026-08-19",
+    "2026-09-07",
+    "2026-09-11",
+    "2026-09-14",
+    "2026-09-18",
+    "2026-09-21",
+    "2026-09-23"
+  ],
+  "seed": 20260927,
+  "population_days": 268,
+  "fits_file": "/workspace/scratch/7efc9574ab0b/wordle-beyond-optimal/results/temporal_prior.json",
+  "history_sha256": "e9b4f1592b313cf03e8784c602d117ab49024834d7ad880a318a96d0230a4187",
+  "fits_sha256": "4a484355ca4f68493c90cbbcf19bc1821109a602a5cf2963df57d800f4885b84",
+  "adaptive_opening_rule": "Original common.choose over all allowed words under the day's specified prior; heuristic, not full-tree optimal",
+  "all_candidates_have_positive_probability": true,
+  "certified_six_turn_policy_for_new_variants": false,
+  "certificate_path": null,
+  "guard_rule": null,
+  "baseline_mismatches": [],
+  "summary": {
+    "baseline": {
+      "days": 64,
+      "solved": 64,
+      "mean_guesses_with_cap_penalty": 3.0625,
+      "total_guesses_with_cap_penalty": 196,
+      "over6": 0,
+      "distribution": {
+        "3": 42,
+        "2": 9,
+        "4": 13
+      },
+      "net_turns_saved_vs_baseline": 0,
+      "fewer_same_more": [
+        0,
+        64,
+        0
+      ],
+      "requested_openers": {
+        "salet": 64
+      },
+      "actual_openers": {
+        "salet": 64
+      },
+      "guard_checks": {}
+    },
+    "structural_salet": {
+      "days": 64,
+      "solved": 64,
+      "mean_guesses_with_cap_penalty": 3.0625,
+      "total_guesses_with_cap_penalty": 196,
+      "over6": 0,
+      "distribution": {
+        "3": 42,
+        "2": 9,
+        "4": 13
+      },
+      "net_turns_saved_vs_baseline": 0,
+      "fewer_same_more": [
+        0,
+        64,
+        0
+      ],
+      "requested_openers": {
+        "salet": 64
+      },
+      "actual_openers": {
+        "salet": 64
+      },
+      "guard_checks": {}
+    },
+    "full_salet": {
+      "days": 64,
+      "solved": 64,
+      "mean_guesses_with_cap_penalty": 3.09375,
+      "total_guesses_with_cap_penalty": 198,
+      "over6": 0,
+      "distribution": {
+        "3": 43,
+        "2": 8,
+        "4": 12,
+        "5": 1
+      },
+      "net_turns_saved_vs_baseline": -2,
+      "fewer_same_more": [
+        0,
+        62,
+        2
+      ],
+      "requested_openers": {
+        "salet": 64
+      },
+      "actual_openers": {
+        "salet": 64
+      },
+      "guard_checks": {}
+    },
+    "base_adaptive": {
+      "days": 64,
+      "solved": 64,
+      "mean_guesses_with_cap_penalty": 3.109375,
+      "total_guesses_with_cap_penalty": 199,
+      "over6": 0,
+      "distribution": {
+        "3": 45,
+        "2": 7,
+        "4": 10,
+        "5": 2
+      },
+      "net_turns_saved_vs_baseline": -3,
+      "fewer_same_more": [
+        12,
+        37,
+        15
+      ],
+      "requested_openers": {
+        "raise": 61,
+        "saner": 3
+      },
+      "actual_openers": {
+        "raise": 61,
+        "saner": 3
+      },
+      "guard_checks": {}
+    },
+    "full_adaptive": {
+      "days": 64,
+      "solved": 64,
+      "mean_guesses_with_cap_penalty": 3.15625,
+      "total_guesses_with_cap_penalty": 202,
+      "over6": 0,
+      "distribution": {
+        "3": 44,
+        "2": 6,
+        "4": 12,
+        "5": 2
+      },
+      "net_turns_saved_vs_baseline": -6,
+      "fewer_same_more": [
+        11,
+        36,
+        17
+      ],
+      "requested_openers": {
+        "raise": 60,
+        "saner": 4
+      },
+      "actual_openers": {
+        "raise": 60,
+        "saner": 4
+      },
+      "guard_checks": {}
+    }
+  },
+  "per_day": {
+    "2026-01-04": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "perce",
+          "posse"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cerne",
+          "posse"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cerne",
+          "posse"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "pound",
+          "posse"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "pound",
+          "posse"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-01-02": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cornu",
+          "proof"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cornu",
+          "proof"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cornu",
+          "proof"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "count",
+          "proof"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "count",
+          "proof"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-01-08": {
+      "baseline": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "blast"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "blast"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "blast"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "slash",
+          "blast"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "shalt",
+          "blast"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-01-10": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "pyric",
+          "manic"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "rindy",
+          "manic"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "rindy",
+          "manic"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "cabin",
+          "manic"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "cabin",
+          "manic"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-01-15": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "crash",
+          "chasm"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "crash",
+          "chasm"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "crash",
+          "chasm"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "slash",
+          "chasm"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "slash",
+          "chasm"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-01-18": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cramp",
+          "sumac"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cramp",
+          "sumac"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cramp",
+          "sumac"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "scalp",
+          "sumac"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "scalp",
+          "sumac"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-01-28": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "pudor",
+          "cruel"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "prion",
+          "cruel"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "prion",
+          "cruel"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "deuce",
+          "cruel"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "dreer",
+          "cruel"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-01-29": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "corni",
+          "flaky"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "corni",
+          "flaky"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "corni",
+          "flaky"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "clout",
+          "flaky"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "tonal",
+          "flaky"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-01-31": {
+      "baseline": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "allot"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "allot"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "allot"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "tonal",
+          "allot"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "tonal",
+          "allot"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-02-02": {
+      "baseline": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "drama",
+          "vicar",
+          "cigar"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "crony",
+          "dimer",
+          "cigar"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "crony",
+          "dimer",
+          "cigar"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "vicar",
+          "cigar"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "vicar",
+          "cigar"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-02-03": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "genre",
+          "weigh"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "genre",
+          "weigh"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "genre",
+          "weigh"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "weigh"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "weigh"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-02-04": {
+      "baseline": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cerge",
+          "coupe",
+          "chide"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "genre",
+          "coupe",
+          "chide"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cerge",
+          "coupe",
+          "chide"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "chide"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "elide",
+          "chide"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-02-05": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cronk",
+          "swoop"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cronk",
+          "swoop"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cronk",
+          "swoop"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "stock",
+          "snowy",
+          "swoop"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "stock",
+          "snowy",
+          "swoop"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-02-06": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "laden",
+          "gavel"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "laden",
+          "gavel"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "laden",
+          "gavel"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "laden",
+          "gavel"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "laden",
+          "gavel"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-02-09": {
+      "baseline": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cello"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cello"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cello"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "leben",
+          "cello"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "leben",
+          "cello"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-02-16": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "hoist",
+          "roost"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "hoist",
+          "roost"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "hoist",
+          "roost"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "roost"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "roost"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-02-20": {
+      "baseline": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "stank"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "stank"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "stank"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "plonk",
+          "stank"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "plonk",
+          "stank"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-02-22": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "drama",
+          "guava"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "drama",
+          "guava"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "drama",
+          "guava"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "coaly",
+          "guava"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "tonal",
+          "quack",
+          "guava"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-02-24": {
+      "baseline": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "drier",
+          "womyn",
+          "buyer"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "drier",
+          "womyn",
+          "buyer"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "drier",
+          "womyn",
+          "buyer"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "feued",
+          "buyer"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "feued",
+          "buyer"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-02-25": {
+      "baseline": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "pheer",
+          "shrew",
+          "shred"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "pheer",
+          "shrew",
+          "shred"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "pheer",
+          "shrew",
+          "shred"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "sheer",
+          "shrew",
+          "shred"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "sheer",
+          "shrew",
+          "shred"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-03-03": {
+      "baseline": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "pudor",
+          "liken",
+          "linen"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "pudor",
+          "liken",
+          "linen"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 5,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "pudor",
+          "liken",
+          "liven",
+          "linen"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "inlet",
+          "liken",
+          "linen"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 5,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "inlet",
+          "liken",
+          "liven",
+          "linen"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-03-07": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cerge",
+          "vogue"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cerge",
+          "vogue"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cerge",
+          "vogue"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "mulct",
+          "vogue"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "mulct",
+          "vogue"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-03-08": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "drily",
+          "lobby"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "drily",
+          "lobby"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "drily",
+          "lobby"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "bundh",
+          "lobby"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "bundh",
+          "lobby"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-03-14": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "penal",
+          "ankle"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "penal",
+          "ankle"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "penal",
+          "ankle"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "along",
+          "ankle"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "along",
+          "ankle"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-03-16": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "crony",
+          "drama"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "crony",
+          "drama"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "crony",
+          "drama"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "crowd",
+          "drama"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "crowd",
+          "drama"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-03-23": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "diene",
+          "serif"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "diene",
+          "serif"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "diene",
+          "serif"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "wiser",
+          "serif"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "wiser",
+          "serif"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-03-31": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cramp",
+          "swamp"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cramp",
+          "swamp"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cramp",
+          "swamp"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "scalp",
+          "swamp"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "scalp",
+          "swamp"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-04-05": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "genre",
+          "envoy"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "genre",
+          "envoy"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "genre",
+          "envoy"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "leben",
+          "envoy"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "leben",
+          "envoy"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-04-14": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "rifle",
+          "cycle"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "rifle",
+          "cycle"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "rifle",
+          "cycle"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "mulct",
+          "cycle"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "mulct",
+          "cycle"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-04-19": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "pirns",
+          "stand"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "pirns",
+          "stand"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "pirns",
+          "stand"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "clapt",
+          "gnows",
+          "stand"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "clapt",
+          "gnows",
+          "stand"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-04-20": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "dearn",
+          "weave"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "dearn",
+          "weave"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "dearn",
+          "weave"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "along",
+          "weave"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "along",
+          "weave"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-04-30": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cornu",
+          "crock"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cornu",
+          "crock"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cornu",
+          "crock"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "count",
+          "crock"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "count",
+          "crock"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-05-03": {
+      "baseline": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cornu",
+          "dumpy",
+          "puffy"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cornu",
+          "dumpy",
+          "puffy"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cornu",
+          "dumpy",
+          "puffy"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "bundh",
+          "puppy",
+          "puffy"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "bundh",
+          "puppy",
+          "puffy"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-05-07": {
+      "baseline": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "genre",
+          "fudge",
+          "budge"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "genre",
+          "fudge",
+          "budge"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "genre",
+          "fudge",
+          "budge"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "flung",
+          "budge"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "flung",
+          "budge"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-05-10": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "pyric",
+          "parka"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "pyric",
+          "parka"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "pyric",
+          "parka"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "compt",
+          "parka"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "compt",
+          "parka"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-05-14": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "gyron",
+          "waver"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "gyron",
+          "waver"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "gyron",
+          "waver"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "empty",
+          "wager",
+          "waver"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "empty",
+          "wager",
+          "waver"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-05-18": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "tonal",
+          "loath"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "tonal",
+          "loath"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "tonal",
+          "loath"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "tonal",
+          "loath"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "tonal",
+          "loath"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-05-31": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "tribe",
+          "etude"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "tribe",
+          "etude"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "tribe",
+          "etude"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "mulct",
+          "etude"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "mulct",
+          "etude"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-06-05": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "drony",
+          "nobly"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "drony",
+          "nobly"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "drony",
+          "nobly"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "bundh",
+          "nobly"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "bundh",
+          "nobly"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-06-06": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cornu",
+          "morph"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cornu",
+          "morph"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cornu",
+          "morph"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "count",
+          "lorry",
+          "morph"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "count",
+          "lorry",
+          "morph"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-06-07": {
+      "baseline": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "north",
+          "pithy",
+          "thumb"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "north",
+          "pithy",
+          "thumb"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "north",
+          "pithy",
+          "thumb"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "bundh",
+          "thumb"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "bundh",
+          "thumb"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-06-08": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "rindy",
+          "mafia"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "rindy",
+          "mafia"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "rindy",
+          "mafia"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "cabin",
+          "mafia"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "cabin",
+          "mafia"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-06-09": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "crony",
+          "wharf"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "crony",
+          "wharf"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "crony",
+          "wharf"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "crowd",
+          "wharf"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "crowd",
+          "wharf"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-06-10": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "corni",
+          "align"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "corni",
+          "align"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "corni",
+          "align"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "align"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "align"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-06-13": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "rifle",
+          "quell"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "rifle",
+          "quell"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "rifle",
+          "quell"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "leben",
+          "quell"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "leben",
+          "quell"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-06-26": {
+      "baseline": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "tread",
+          "meaty",
+          "acute"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "tread",
+          "meaty",
+          "acute"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "tread",
+          "meaty",
+          "acute"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "algae",
+          "abode",
+          "acute"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "algae",
+          "abode",
+          "acute"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-06-20": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "dearn",
+          "drake"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "dearn",
+          "drake"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "dearn",
+          "drake"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "grape",
+          "drake"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "grape",
+          "drake"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-06-28": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "nidor",
+          "emcee"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "nidor",
+          "emcee"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "nidor",
+          "emcee"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "flung",
+          "tepee",
+          "emcee"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "flung",
+          "tepee",
+          "emcee"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-07-05": {
+      "baseline": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "porch",
+          "sigma",
+          "swami"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "chark",
+          "spawn",
+          "swami"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "porch",
+          "sigma",
+          "swami"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "slain",
+          "swami"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "slain",
+          "swami"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-07-14": {
+      "baseline": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "steak"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "steak"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "steak"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "steal",
+          "steak"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "steal",
+          "steak"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-07-17": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "penal",
+          "legal"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "gnarl",
+          "legal"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "gnarl",
+          "legal"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "leant",
+          "legal"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "leant",
+          "legal"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-07-21": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "unhip",
+          "shill"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "unhip",
+          "shill"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "unhip",
+          "shill"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 5,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "flunk",
+          "spilt",
+          "swill",
+          "shill"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "flunk",
+          "spilt",
+          "shill"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-07-27": {
+      "baseline": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "poser"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "poser"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "nidor",
+          "poser"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "sheer",
+          "poser"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "sheer",
+          "poser"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-07-31": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cerne",
+          "purse"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cerne",
+          "purse"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cerne",
+          "purse"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "purse"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "purse"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-08-10": {
+      "baseline": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "snipe"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "snipe"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "snipe"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "nempt",
+          "snipe"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "nempt",
+          "snipe"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-08-13": {
+      "baseline": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "crash"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "crash"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "crash"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "crash"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "crash"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-08-16": {
+      "baseline": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "arson",
+          "amass",
+          "aspic"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "arson",
+          "amass",
+          "aspic"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "arson",
+          "amass",
+          "aspic"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "slain",
+          "aspic"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "vista",
+          "slain",
+          "aspic"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-08-19": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "rindy",
+          "grill"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "rindy",
+          "grill"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "rindy",
+          "grill"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "clung",
+          "grill"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "brick",
+          "grill"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-09-07": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "rindy",
+          "blind"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "rindy",
+          "blind"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "rindy",
+          "blind"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "clout",
+          "blind"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "saner",
+          "doilt",
+          "blind"
+        ],
+        "requested_opener": "saner",
+        "safety_checks": []
+      }
+    },
+    "2026-09-14": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cerne",
+          "rinse"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cerne",
+          "rinse"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "cerne",
+          "rinse"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "saner",
+          "rinse"
+        ],
+        "requested_opener": "saner",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "saner",
+          "rinse"
+        ],
+        "requested_opener": "saner",
+        "safety_checks": []
+      }
+    },
+    "2026-09-18": {
+      "baseline": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "yupon",
+          "snowy"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "yupon",
+          "snowy"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "yupon",
+          "snowy"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "saner",
+          "knout",
+          "snowy"
+        ],
+        "requested_opener": "saner",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "saner",
+          "knout",
+          "snowy"
+        ],
+        "requested_opener": "saner",
+        "safety_checks": []
+      }
+    },
+    "2026-09-11": {
+      "baseline": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "aster"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "aster"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 2,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "aster"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "swear",
+          "aster"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 3,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "swear",
+          "aster"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    },
+    "2026-09-21": {
+      "baseline": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "gormy",
+          "rewed",
+          "pager"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "gormy",
+          "rewed",
+          "pager"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "gormy",
+          "rewed",
+          "pager"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 5,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "empty",
+          "paler",
+          "cargo",
+          "pager"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 5,
+        "solved": true,
+        "guesses": [
+          "saner",
+          "empty",
+          "paler",
+          "pacer",
+          "pager"
+        ],
+        "requested_opener": "saner",
+        "safety_checks": []
+      }
+    },
+    "2026-09-23": {
+      "baseline": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "north",
+          "worth",
+          "forth"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "structural_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "north",
+          "worth",
+          "forth"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "full_salet": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "salet",
+          "north",
+          "worth",
+          "forth"
+        ],
+        "requested_opener": "salet",
+        "safety_checks": []
+      },
+      "base_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "saner",
+          "crout",
+          "worth",
+          "forth"
+        ],
+        "requested_opener": "saner",
+        "safety_checks": []
+      },
+      "full_adaptive": {
+        "turns": 4,
+        "solved": true,
+        "guesses": [
+          "raise",
+          "count",
+          "worth",
+          "forth"
+        ],
+        "requested_opener": "raise",
+        "safety_checks": []
+      }
+    }
+  },
+  "elapsed_seconds": 212.29078841209412
+}

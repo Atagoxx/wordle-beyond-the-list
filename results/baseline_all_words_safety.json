@@ -1,0 +1,56 @@
+{
+  "scope": "Single fixed P2s prior on 2026-09-25 with SALET; all allowed-word hypothetical answers, not the 633 historical games.",
+  "prior_day": "2026-09-25",
+  "prior": "P2s",
+  "opener": "salet",
+  "complete": false,
+  "strict_reduction_verified_for_visited_non_green_branches": true,
+  "allowed_words": 12972,
+  "positive_prior_candidates": 12972,
+  "stop_reason": "Stopped at the 60 second wall-clock limit; traversal incomplete.",
+  "visited_nodes": 9781,
+  "visited_non_green_branches": 9780,
+  "solved_answers": 9492,
+  "visited_solved_turn_distribution": {
+    "2": 41,
+    "3": 1306,
+    "4": 3919,
+    "5": 2805,
+    "6": 1077,
+    "7": 271,
+    "8": 63,
+    "9": 9,
+    "10": 1
+  },
+  "maximum_visited_solved_turns": 10,
+  "visited_solved_answers_over_six": 344,
+  "longest_visited_solved_path": {
+    "turns": 10,
+    "answer": "gings",
+    "guesses": [
+      "salet",
+      "hoiks",
+      "virus",
+      "finds",
+      "wings",
+      "pings",
+      "zings",
+      "mings",
+      "bings",
+      "gings"
+    ],
+    "feedback_codes": [
+      1,
+      171,
+      168,
+      186,
+      240,
+      240,
+      240,
+      240,
+      240,
+      242
+    ]
+  },
+  "elapsed_seconds": 60.0
+}

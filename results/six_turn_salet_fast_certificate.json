@@ -1,0 +1,70 @@
+{
+ "status": "UNKNOWN",
+ "policy": null,
+ "reason": "Wall-clock budget exhausted; feasibility is unknown",
+ "stats": {
+  "states": 13034,
+  "guesses_examined": 23737033,
+  "memo_hits": 3940,
+  "heuristic_calls": 1768,
+  "probe_scoring_calls": 1596,
+  "probe_scoring_rows": 20703312,
+  "zero_progress_skipped": 0,
+  "duplicate_partitions_skipped": 0,
+  "local_budget_unknown": 0,
+  "unknown_cache_hits": 129,
+  "elapsed_seconds": 120.00047708900001,
+  "memo_entries": 12562
+ },
+ "passes": [
+  {
+   "width": 4,
+   "certified_buckets": 191,
+   "unresolved": [
+    {
+     "code": 109,
+     "candidates": 126
+    },
+    {
+     "code": 19,
+     "candidates": 98
+    }
+   ],
+   "elapsed_seconds": 96.43638831299995
+  },
+  {
+   "width": 8,
+   "certified_buckets": 191,
+   "unresolved": [
+    {
+     "code": 109,
+     "candidates": 126
+    },
+    {
+     "code": 19,
+     "candidates": 98
+    }
+   ],
+   "elapsed_seconds": 103.77821214100004
+  }
+ ],
+ "certified_first_feedback_buckets": 191,
+ "total_first_feedback_buckets": 193,
+ "unresolved_first_feedback_buckets": [
+  {
+   "code": 109,
+   "candidates": 126
+  },
+  {
+   "code": 19,
+   "candidates": 98
+  }
+ ],
+ "independently_verified": false,
+ "candidate_count": 12972,
+ "remaining": 6,
+ "first_guess": "salet",
+ "prior_ordering_day": "2026-09-26",
+ "scope": "Every word in data/allowed.txt; normal mode, unrestricted legal probes",
+ "allowed_sha256": "feacc549249b5dcb43e2799fbbcda14ebc33d55904fb15d043779104e60c1579"
+}

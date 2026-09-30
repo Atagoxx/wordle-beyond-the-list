@@ -1,0 +1,2386 @@
+{
+  "exploratory": true,
+  "evaluation_start": "2026-01-01",
+  "evaluation_end": "2026-09-25",
+  "source_hashes": {
+    "nyt_history.json": "e9b4f1592b313cf03e8784c602d117ab49024834d7ad880a318a96d0230a4187",
+    "tool_prior.json": "6b2d5eb69a813de1606934a03eba5b09885de9a5fc2f151921883fa266c8350a",
+    "allowed.txt": "feacc549249b5dcb43e2799fbbcda14ebc33d55904fb15d043779104e60c1579",
+    "answers.txt": "f40e47975cf360ff9febe7d49c8e285054d8fa3fb9644cea575922060951d6ee"
+  },
+  "l2": 2.0,
+  "regularization_definition": "sum historical log likelihood minus 0.5 * 2.0 * squared coefficient norm",
+  "training_window_days": 365,
+  "earliest_training_date": "2022-11-07",
+  "refit_schedule": "calendar quarter start, using only earlier days",
+  "feature_definitions": {
+    "same_first_letter_past7": "Fraction of answers in the previous 7 calendar days sharing the candidate's first letter",
+    "same_last_letter_past7": "Fraction of answers in the previous 7 calendar days sharing the candidate's last letter",
+    "same_last2_past7": "Fraction of answers in the previous 7 calendar days sharing the candidate's final two letters",
+    "mean_unique_letter_jaccard_past3": "Mean Jaccard overlap of unique-letter sets with answers in the previous 3 calendar days",
+    "repeat_fraction_times_recent_shift": "Candidate (5-unique_letters)/4 times (past3 mean minus past90 mean of that fraction)",
+    "difficulty_times_recent_shift": "Candidate clip(-log10(base_prior)/4,0,1) times (past3 mean minus past90 mean of that difficulty)",
+    "repeat_gap_if_at_least8_seen": "Repeat-class only: min(calendar days since latest repeat event,30)/30 - 0.5; zero until 8 prior repeat events",
+    "outside_unused_gap_if_at_least8_seen": "Outside-unused-class only: corresponding gap feature; zero until 8 prior outside-unused events"
+  },
+  "structural_features": [
+    "same_first_letter_past7",
+    "same_last_letter_past7",
+    "same_last2_past7",
+    "mean_unique_letter_jaccard_past3",
+    "repeat_fraction_times_recent_shift",
+    "difficulty_times_recent_shift"
+  ],
+  "category_features": [
+    "repeat_gap_if_at_least8_seen",
+    "outside_unused_gap_if_at_least8_seen"
+  ],
+  "variants": {
+    "structural": "six features within each category, preserving P2 category masses",
+    "full": "structural tilt plus separately fitted two-feature category softmax"
+  },
+  "caution": "Past-only fitting within an exploratory historical evaluation; log-likelihood gains do not imply fewer guesses.",
+  "fits": {
+    "2026-01-01": {
+      "cutoff": "2026-01-01",
+      "train_start": "2025-01-01",
+      "train_end": "2025-12-31",
+      "train_days": 365,
+      "l2": 2.0,
+      "structural_beta": [
+        -1.3008256222324879,
+        0.2030405425344256,
+        0.13930322006351986,
+        -0.2836820311559288,
+        0.016699752364502395,
+        -0.01346777149894722
+      ],
+      "category_beta": [
+        0.0,
+        -0.4823087781275986
+      ],
+      "structural_diagnostics": {
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 8,
+        "function_evaluations": 9,
+        "gradient_max_abs": 4.144166199471222e-05,
+        "base_training_loglik_nats": -2454.778673083858,
+        "fitted_training_loglik_nats": -2448.43441035462,
+        "penalized_training_loglik_nats": -2450.268124260508,
+        "l2_penalty": 1.8337139058882155,
+        "candidate_rows": 499855
+      },
+      "category_diagnostics": {
+        "success": true,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "iterations": 3,
+        "function_evaluations": 5,
+        "gradient_max_abs": 4.796274488683139e-12,
+        "base_training_loglik_nats": -78.67423611464332,
+        "fitted_training_loglik_nats": -77.9441206898033,
+        "penalized_training_loglik_nats": -78.17674244726224,
+        "l2_penalty": 0.23262175745893712
+      },
+      "history_sha256": "e9b4f1592b313cf03e8784c602d117ab49024834d7ad880a318a96d0230a4187",
+      "structural_features": [
+        "same_first_letter_past7",
+        "same_last_letter_past7",
+        "same_last2_past7",
+        "mean_unique_letter_jaccard_past3",
+        "repeat_fraction_times_recent_shift",
+        "difficulty_times_recent_shift"
+      ],
+      "category_features": [
+        "repeat_gap_if_at_least8_seen",
+        "outside_unused_gap_if_at_least8_seen"
+      ]
+    },
+    "2026-04-01": {
+      "cutoff": "2026-04-01",
+      "train_start": "2025-04-01",
+      "train_end": "2026-03-31",
+      "train_days": 365,
+      "l2": 2.0,
+      "structural_beta": [
+        -1.0743615607678751,
+        -0.133087619088397,
+        -0.13478839916949767,
+        -0.24792435196232834,
+        -0.03137069239101642,
+        -0.013063696004988438
+      ],
+      "category_beta": [
+        0.0,
+        -0.5314022569339895
+      ],
+      "structural_diagnostics": {
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 7,
+        "function_evaluations": 9,
+        "gradient_max_abs": 7.4074334173168666e-06,
+        "base_training_loglik_nats": -2439.1411809026085,
+        "fitted_training_loglik_nats": -2434.715438727923,
+        "penalized_training_loglik_nats": -2435.968192982874,
+        "l2_penalty": 1.2527542549512216,
+        "candidate_rows": 517539
+      },
+      "category_diagnostics": {
+        "success": true,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "iterations": 3,
+        "function_evaluations": 5,
+        "gradient_max_abs": 2.8557156639408277e-12,
+        "base_training_loglik_nats": -118.85409442916296,
+        "fitted_training_loglik_nats": -117.93410519006815,
+        "penalized_training_loglik_nats": -118.21649354874269,
+        "l2_penalty": 0.28238835867453776
+      },
+      "history_sha256": "e9b4f1592b313cf03e8784c602d117ab49024834d7ad880a318a96d0230a4187",
+      "structural_features": [
+        "same_first_letter_past7",
+        "same_last_letter_past7",
+        "same_last2_past7",
+        "mean_unique_letter_jaccard_past3",
+        "repeat_fraction_times_recent_shift",
+        "difficulty_times_recent_shift"
+      ],
+      "category_features": [
+        "repeat_gap_if_at_least8_seen",
+        "outside_unused_gap_if_at_least8_seen"
+      ]
+    },
+    "2026-07-01": {
+      "cutoff": "2026-07-01",
+      "train_start": "2025-07-01",
+      "train_end": "2026-06-30",
+      "train_days": 365,
+      "l2": 2.0,
+      "structural_beta": [
+        -0.6408426715527369,
+        -0.013483950468081821,
+        -0.2643901408263944,
+        0.0540817775567323,
+        -0.026886691261828143,
+        -0.009062590878129448
+      ],
+      "category_beta": [
+        0.22020043021827992,
+        -0.5645509650423677
+      ],
+      "structural_diagnostics": {
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 7,
+        "function_evaluations": 8,
+        "gradient_max_abs": 0.0001051671131282253,
+        "base_training_loglik_nats": -2407.1444164644154,
+        "fitted_training_loglik_nats": -2405.490481965342,
+        "penalized_training_loglik_nats": -2405.9749751218956,
+        "l2_penalty": 0.4844931565534044,
+        "candidate_rows": 509675
+      },
+      "category_diagnostics": {
+        "success": true,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "iterations": 4,
+        "function_evaluations": 6,
+        "gradient_max_abs": 5.4026326912204325e-08,
+        "base_training_loglik_nats": -151.1032455534838,
+        "fitted_training_loglik_nats": -149.91846395584184,
+        "penalized_training_loglik_nats": -150.28566997744042,
+        "l2_penalty": 0.36720602159858423
+      },
+      "history_sha256": "e9b4f1592b313cf03e8784c602d117ab49024834d7ad880a318a96d0230a4187",
+      "structural_features": [
+        "same_first_letter_past7",
+        "same_last_letter_past7",
+        "same_last2_past7",
+        "mean_unique_letter_jaccard_past3",
+        "repeat_fraction_times_recent_shift",
+        "difficulty_times_recent_shift"
+      ],
+      "category_features": [
+        "repeat_gap_if_at_least8_seen",
+        "outside_unused_gap_if_at_least8_seen"
+      ]
+    }
+  },
+  "per_day": {
+    "2026-01-01": {
+      "cutoff": "2026-01-01",
+      "truth_word": "fable",
+      "category": "unused_original",
+      "base_log2p": -9.219276937403862,
+      "structural_log2p": -9.303082363429397,
+      "full_log2p": -9.280952721057519
+    },
+    "2026-01-02": {
+      "cutoff": "2026-01-01",
+      "truth_word": "proof",
+      "category": "unused_original",
+      "base_log2p": -8.984118629320067,
+      "structural_log2p": -8.83825893633508,
+      "full_log2p": -8.816129293963202
+    },
+    "2026-01-03": {
+      "cutoff": "2026-01-01",
+      "truth_word": "sitar",
+      "category": "outside_unused",
+      "base_log2p": -15.687780831074361,
+      "structural_log2p": -15.83585457780556,
+      "full_log2p": -16.163351560518258
+    },
+    "2026-01-04": {
+      "cutoff": "2026-01-01",
+      "truth_word": "posse",
+      "category": "unused_original",
+      "base_log2p": -9.512538860072837,
+      "structural_log2p": -9.611391682639537,
+      "full_log2p": -9.637032097205658
+    },
+    "2026-01-05": {
+      "cutoff": "2026-01-01",
+      "truth_word": "filly",
+      "category": "unused_original",
+      "base_log2p": -9.543617708605467,
+      "structural_log2p": -9.911692894014452,
+      "full_log2p": -9.935320888978943
+    },
+    "2026-01-06": {
+      "cutoff": "2026-01-01",
+      "truth_word": "oomph",
+      "category": "outside_unused",
+      "base_log2p": -15.638325292218799,
+      "structural_log2p": -15.512369042723476,
+      "full_log2p": -15.255684175915349
+    },
+    "2026-01-07": {
+      "cutoff": "2026-01-01",
+      "truth_word": "pecan",
+      "category": "unused_original",
+      "base_log2p": -9.317549972737233,
+      "structural_log2p": -9.691521215958613,
+      "full_log2p": -9.719115223392492
+    },
+    "2026-01-08": {
+      "cutoff": "2026-01-01",
+      "truth_word": "blast",
+      "category": "unused_original",
+      "base_log2p": -8.982892115745276,
+      "structural_log2p": -8.869227321778347,
+      "full_log2p": -8.894656926834633
+    },
+    "2026-01-09": {
+      "cutoff": "2026-01-01",
+      "truth_word": "eight",
+      "category": "unused_original",
+      "base_log2p": -9.013002084813271,
+      "structural_log2p": -8.857332442341727,
+      "full_log2p": -8.880628989218458
+    },
+    "2026-01-10": {
+      "cutoff": "2026-01-01",
+      "truth_word": "manic",
+      "category": "unused_original",
+      "base_log2p": -9.30893059012766,
+      "structural_log2p": -9.236069738875663,
+      "full_log2p": -9.257264163228026
+    },
+    "2026-01-11": {
+      "cutoff": "2026-01-01",
+      "truth_word": "quark",
+      "category": "unused_original",
+      "base_log2p": -10.70166055826416,
+      "structural_log2p": -10.611581543177142,
+      "full_log2p": -10.630704376133025
+    },
+    "2026-01-12": {
+      "cutoff": "2026-01-01",
+      "truth_word": "trial",
+      "category": "unused_original",
+      "base_log2p": -8.906875461820542,
+      "structural_log2p": -8.903798796279595,
+      "full_log2p": -8.920880168454008
+    },
+    "2026-01-13": {
+      "cutoff": "2026-01-01",
+      "truth_word": "gumbo",
+      "category": "unused_original",
+      "base_log2p": -9.692298463029454,
+      "structural_log2p": -9.606859728321707,
+      "full_log2p": -9.62085817524758
+    },
+    "2026-01-14": {
+      "cutoff": "2026-01-01",
+      "truth_word": "avoid",
+      "category": "unused_original",
+      "base_log2p": -8.893146203579713,
+      "structural_log2p": -8.842820729292043,
+      "full_log2p": -8.854977112380578
+    },
+    "2026-01-15": {
+      "cutoff": "2026-01-01",
+      "truth_word": "chasm",
+      "category": "unused_original",
+      "base_log2p": -9.7118272252072,
+      "structural_log2p": -9.643895206479598,
+      "full_log2p": -9.65344373908503
+    },
+    "2026-01-16": {
+      "cutoff": "2026-01-01",
+      "truth_word": "racer",
+      "category": "unused_original",
+      "base_log2p": -9.145246325878091,
+      "structural_log2p": -9.087165065574476,
+      "full_log2p": -9.095062057832964
+    },
+    "2026-01-17": {
+      "cutoff": "2026-01-01",
+      "truth_word": "fiery",
+      "category": "unused_original",
+      "base_log2p": -9.07606242235452,
+      "structural_log2p": -8.997534743031714,
+      "full_log2p": -9.003804686670678
+    },
+    "2026-01-18": {
+      "cutoff": "2026-01-01",
+      "truth_word": "sumac",
+      "category": "unused_original",
+      "base_log2p": -10.958219521793005,
+      "structural_log2p": -10.95253236241044,
+      "full_log2p": -10.956811068228198
+    },
+    "2026-01-19": {
+      "cutoff": "2026-01-01",
+      "truth_word": "waxen",
+      "category": "unused_original",
+      "base_log2p": -11.32285537660131,
+      "structural_log2p": -11.200506549902311,
+      "full_log2p": -11.203337451163646
+    },
+    "2026-01-20": {
+      "cutoff": "2026-01-01",
+      "truth_word": "sully",
+      "category": "unused_original",
+      "base_log2p": -9.694507771376164,
+      "structural_log2p": -9.796621106187102,
+      "full_log2p": -9.798025873310797
+    },
+    "2026-01-21": {
+      "cutoff": "2026-01-01",
+      "truth_word": "cubic",
+      "category": "unused_original",
+      "base_log2p": -9.294011856586366,
+      "structural_log2p": -9.375897764929936,
+      "full_log2p": -9.375897764929935
+    },
+    "2026-01-22": {
+      "cutoff": "2026-01-01",
+      "truth_word": "clink",
+      "category": "unused_original",
+      "base_log2p": -9.648550072369218,
+      "structural_log2p": -10.050233228859586,
+      "full_log2p": -10.048975374721921
+    },
+    "2026-01-23": {
+      "cutoff": "2026-01-01",
+      "truth_word": "baron",
+      "category": "unused_original",
+      "base_log2p": -9.214785683227655,
+      "structural_log2p": -9.002660499282664,
+      "full_log2p": -9.00016378026339
+    },
+    "2026-01-24": {
+      "cutoff": "2026-01-01",
+      "truth_word": "cliff",
+      "category": "unused_original",
+      "base_log2p": -9.046103690032373,
+      "structural_log2p": -9.480915998712359,
+      "full_log2p": -9.477199133340962
+    },
+    "2026-01-25": {
+      "cutoff": "2026-01-01",
+      "truth_word": "strut",
+      "category": "unused_original",
+      "base_log2p": -9.176074208659799,
+      "structural_log2p": -9.504607748225283,
+      "full_log2p": -9.49968918768554
+    },
+    "2026-01-26": {
+      "cutoff": "2026-01-01",
+      "truth_word": "freak",
+      "category": "unused_original",
+      "base_log2p": -9.04054111401169,
+      "structural_log2p": -8.842592883542999,
+      "full_log2p": -8.8364908150261
+    },
+    "2026-01-27": {
+      "cutoff": "2026-01-01",
+      "truth_word": "dusky",
+      "category": "unused_original",
+      "base_log2p": -9.436254640283842,
+      "structural_log2p": -9.21874284482235,
+      "full_log2p": -9.211475194851992
+    },
+    "2026-01-28": {
+      "cutoff": "2026-01-01",
+      "truth_word": "cruel",
+      "category": "unused_original",
+      "base_log2p": -8.935748071248726,
+      "structural_log2p": -9.6273629007491,
+      "full_log2p": -9.618947338478373
+    },
+    "2026-01-29": {
+      "cutoff": "2026-01-01",
+      "truth_word": "flaky",
+      "category": "unused_original",
+      "base_log2p": -9.298022246533868,
+      "structural_log2p": -9.402128988828007,
+      "full_log2p": -9.392582929307855
+    },
+    "2026-01-30": {
+      "cutoff": "2026-01-01",
+      "truth_word": "jumbo",
+      "category": "unused_original",
+      "base_log2p": -9.262362454036783,
+      "structural_log2p": -9.107298939278678,
+      "full_log2p": -9.096639546697757
+    },
+    "2026-01-31": {
+      "cutoff": "2026-01-01",
+      "truth_word": "allot",
+      "category": "unused_original",
+      "base_log2p": -9.492395781140786,
+      "structural_log2p": -9.359504733200648,
+      "full_log2p": -9.347748924096441
+    },
+    "2026-02-01": {
+      "cutoff": "2026-01-01",
+      "truth_word": "spiny",
+      "category": "unused_original",
+      "base_log2p": -9.75601736551155,
+      "structural_log2p": -9.804029973061827,
+      "full_log2p": -9.791194419502828
+    },
+    "2026-02-02": {
+      "cutoff": "2026-01-01",
+      "truth_word": "cigar",
+      "category": "repeat",
+      "base_log2p": -18.152438915439877,
+      "structural_log2p": -18.307244679124008,
+      "full_log2p": -18.293345811862896
+    },
+    "2026-02-03": {
+      "cutoff": "2026-01-01",
+      "truth_word": "weigh",
+      "category": "unused_original",
+      "base_log2p": -8.998609866695878,
+      "structural_log2p": -8.881946607852333,
+      "full_log2p": -8.867000619449975
+    },
+    "2026-02-04": {
+      "cutoff": "2026-01-01",
+      "truth_word": "chide",
+      "category": "unused_original",
+      "base_log2p": -9.958947443645819,
+      "structural_log2p": -10.438204045125133,
+      "full_log2p": -10.422226893045359
+    },
+    "2026-02-05": {
+      "cutoff": "2026-01-01",
+      "truth_word": "swoop",
+      "category": "unused_original",
+      "base_log2p": -9.193351876433088,
+      "structural_log2p": -9.320297854680748,
+      "full_log2p": -9.303305264355787
+    },
+    "2026-02-06": {
+      "cutoff": "2026-01-01",
+      "truth_word": "gavel",
+      "category": "unused_original",
+      "base_log2p": -9.58934356288135,
+      "structural_log2p": -9.449086846736986,
+      "full_log2p": -9.432094256412027
+    },
+    "2026-02-07": {
+      "cutoff": "2026-01-01",
+      "truth_word": "bleat",
+      "category": "unused_original",
+      "base_log2p": -9.753434335350018,
+      "structural_log2p": -9.586342041838996,
+      "full_log2p": -9.569349451514036
+    },
+    "2026-02-08": {
+      "cutoff": "2026-01-01",
+      "truth_word": "embed",
+      "category": "unused_original",
+      "base_log2p": -9.120478122751548,
+      "structural_log2p": -8.965877409455121,
+      "full_log2p": -8.948884819130162
+    },
+    "2026-02-09": {
+      "cutoff": "2026-01-01",
+      "truth_word": "cello",
+      "category": "unused_original",
+      "base_log2p": -9.250578668547588,
+      "structural_log2p": -9.70624877054757,
+      "full_log2p": -9.68925618022261
+    },
+    "2026-02-10": {
+      "cutoff": "2026-01-01",
+      "truth_word": "scene",
+      "category": "unused_original",
+      "base_log2p": -8.807778839568838,
+      "structural_log2p": -8.933410898897808,
+      "full_log2p": -8.918126602464515
+    },
+    "2026-02-11": {
+      "cutoff": "2026-01-01",
+      "truth_word": "vegan",
+      "category": "unused_original",
+      "base_log2p": -8.89564389260017,
+      "structural_log2p": -8.759039187910286,
+      "full_log2p": -8.745461164971521
+    },
+    "2026-02-12": {
+      "cutoff": "2026-01-01",
+      "truth_word": "surge",
+      "category": "unused_original",
+      "base_log2p": -8.859216816586091,
+      "structural_log2p": -9.237753330763216,
+      "full_log2p": -9.22417530782445
+    },
+    "2026-02-13": {
+      "cutoff": "2026-01-01",
+      "truth_word": "mooch",
+      "category": "outside_unused",
+      "base_log2p": -16.198819045836775,
+      "structural_log2p": -16.057185981119606,
+      "full_log2p": -16.39322445724258
+    },
+    "2026-02-14": {
+      "cutoff": "2026-01-01",
+      "truth_word": "bloom",
+      "category": "unused_original",
+      "base_log2p": -8.85592690207381,
+      "structural_log2p": -8.974269350794401,
+      "full_log2p": -8.990101921691068
+    },
+    "2026-02-15": {
+      "cutoff": "2026-01-01",
+      "truth_word": "skull",
+      "category": "unused_original",
+      "base_log2p": -8.919068030004182,
+      "structural_log2p": -9.321622229397292,
+      "full_log2p": -9.336208271335018
+    },
+    "2026-02-16": {
+      "cutoff": "2026-01-01",
+      "truth_word": "roost",
+      "category": "unused_original",
+      "base_log2p": -9.18166620150334,
+      "structural_log2p": -9.026354695714703,
+      "full_log2p": -9.039713036547292
+    },
+    "2026-02-17": {
+      "cutoff": "2026-01-01",
+      "truth_word": "squad",
+      "category": "repeat",
+      "base_log2p": -17.064470976081072,
+      "structural_log2p": -17.758007792798967,
+      "full_log2p": -17.770156991667488
+    },
+    "2026-02-18": {
+      "cutoff": "2026-01-01",
+      "truth_word": "mogul",
+      "category": "unused_original",
+      "base_log2p": -9.386714980455618,
+      "structural_log2p": -9.46702749515982,
+      "full_log2p": -9.477985845857
+    },
+    "2026-02-19": {
+      "cutoff": "2026-01-01",
+      "truth_word": "hoist",
+      "category": "unused_original",
+      "base_log2p": -9.118665853928057,
+      "structural_log2p": -8.926355275478015,
+      "full_log2p": -8.93614080978472
+    },
+    "2026-02-20": {
+      "cutoff": "2026-01-01",
+      "truth_word": "stank",
+      "category": "unused_original",
+      "base_log2p": -9.182340523117057,
+      "structural_log2p": -9.59719786901087,
+      "full_log2p": -9.605828360004448
+    },
+    "2026-02-21": {
+      "cutoff": "2026-01-01",
+      "truth_word": "awake",
+      "category": "repeat",
+      "base_log2p": -16.382240738793797,
+      "structural_log2p": -16.230594558029576,
+      "full_log2p": -16.238087523363866
+    },
+    "2026-02-22": {
+      "cutoff": "2026-01-01",
+      "truth_word": "guava",
+      "category": "unused_original",
+      "base_log2p": -9.918932494646453,
+      "structural_log2p": -9.74389344741356,
+      "full_log2p": -9.75026615257036
+    },
+    "2026-02-23": {
+      "cutoff": "2026-01-01",
+      "truth_word": "attic",
+      "category": "unused_original",
+      "base_log2p": -8.920758284483973,
+      "structural_log2p": -9.089558645014082,
+      "full_log2p": -9.094828106525936
+    },
+    "2026-02-24": {
+      "cutoff": "2026-01-01",
+      "truth_word": "buyer",
+      "category": "unused_original",
+      "base_log2p": -8.984007559123945,
+      "structural_log2p": -8.842216285296809,
+      "full_log2p": -8.846399273940934
+    },
+    "2026-02-25": {
+      "cutoff": "2026-01-01",
+      "truth_word": "shred",
+      "category": "outside_unused",
+      "base_log2p": -15.17519044220304,
+      "structural_log2p": -15.332247593614495,
+      "full_log2p": -15.265778189339532
+    },
+    "2026-02-26": {
+      "cutoff": "2026-01-01",
+      "truth_word": "lance",
+      "category": "unused_original",
+      "base_log2p": -8.9561975155467,
+      "structural_log2p": -8.786026034952545,
+      "full_log2p": -8.803825515953232
+    },
+    "2026-02-27": {
+      "cutoff": "2026-01-01",
+      "truth_word": "dizzy",
+      "category": "unused_original",
+      "base_log2p": -9.119163781059891,
+      "structural_log2p": -8.950041642125958,
+      "full_log2p": -8.966440613918344
+    },
+    "2026-02-28": {
+      "cutoff": "2026-01-01",
+      "truth_word": "hydra",
+      "category": "outside_unused",
+      "base_log2p": -16.466021561014923,
+      "structural_log2p": -16.39138186990932,
+      "full_log2p": -16.128071546960665
+    },
+    "2026-03-01": {
+      "cutoff": "2026-01-01",
+      "truth_word": "fluke",
+      "category": "unused_original",
+      "base_log2p": -9.091660525262263,
+      "structural_log2p": -8.931445076021863,
+      "full_log2p": -8.951208789174157
+    },
+    "2026-03-02": {
+      "cutoff": "2026-01-01",
+      "truth_word": "slime",
+      "category": "unused_original",
+      "base_log2p": -8.989136474233348,
+      "structural_log2p": -9.078487890019053,
+      "full_log2p": -9.096697516348026
+    },
+    "2026-03-03": {
+      "cutoff": "2026-01-01",
+      "truth_word": "linen",
+      "category": "repeat",
+      "base_log2p": -16.040898373988217,
+      "structural_log2p": -16.25528583166919,
+      "full_log2p": -16.271964520408538
+    },
+    "2026-03-04": {
+      "cutoff": "2026-01-01",
+      "truth_word": "theft",
+      "category": "unused_original",
+      "base_log2p": -8.894963114555834,
+      "structural_log2p": -8.795553800338947,
+      "full_log2p": -8.810724379929427
+    },
+    "2026-03-05": {
+      "cutoff": "2026-01-01",
+      "truth_word": "sheep",
+      "category": "unused_original",
+      "base_log2p": -8.924877460016491,
+      "structural_log2p": -9.153761009703064,
+      "full_log2p": -9.167445991525469
+    },
+    "2026-03-06": {
+      "cutoff": "2026-01-01",
+      "truth_word": "gunky",
+      "category": "outside_unused",
+      "base_log2p": -17.542807772776108,
+      "structural_log2p": -17.351865057221133,
+      "full_log2p": -17.155339294592515
+    },
+    "2026-03-07": {
+      "cutoff": "2026-01-01",
+      "truth_word": "vogue",
+      "category": "unused_original",
+      "base_log2p": -9.129569239075035,
+      "structural_log2p": -8.949871976474357,
+      "full_log2p": -8.97159725110801
+    },
+    "2026-03-08": {
+      "cutoff": "2026-01-01",
+      "truth_word": "lobby",
+      "category": "unused_original",
+      "base_log2p": -8.960647563111449,
+      "structural_log2p": -9.058926199680892,
+      "full_log2p": -9.0789442109325
+    },
+    "2026-03-09": {
+      "cutoff": "2026-01-01",
+      "truth_word": "hasty",
+      "category": "unused_original",
+      "base_log2p": -9.023909517927525,
+      "structural_log2p": -8.825549666739638,
+      "full_log2p": -8.843885668167218
+    },
+    "2026-03-10": {
+      "cutoff": "2026-01-01",
+      "truth_word": "shoal",
+      "category": "unused_original",
+      "base_log2p": -9.485939271708173,
+      "structural_log2p": -9.755329313647254,
+      "full_log2p": -9.772008214071315
+    },
+    "2026-03-11": {
+      "cutoff": "2026-01-01",
+      "truth_word": "teddy",
+      "category": "unused_original",
+      "base_log2p": -9.284417162093925,
+      "structural_log2p": -9.332157365359475,
+      "full_log2p": -9.347203732720658
+    },
+    "2026-03-12": {
+      "cutoff": "2026-01-01",
+      "truth_word": "smell",
+      "category": "unused_original",
+      "base_log2p": -8.816809746795617,
+      "structural_log2p": -9.235735316660389,
+      "full_log2p": -9.24917338185912
+    },
+    "2026-03-13": {
+      "cutoff": "2026-01-01",
+      "truth_word": "eaten",
+      "category": "unused_original",
+      "base_log2p": -9.012615383599165,
+      "structural_log2p": -8.94591422347141,
+      "full_log2p": -8.957767884188865
+    },
+    "2026-03-14": {
+      "cutoff": "2026-01-01",
+      "truth_word": "ankle",
+      "category": "unused_original",
+      "base_log2p": -8.843454880519939,
+      "structural_log2p": -8.77167414141117,
+      "full_log2p": -8.7819669659108
+    },
+    "2026-03-15": {
+      "cutoff": "2026-01-01",
+      "truth_word": "grade",
+      "category": "repeat",
+      "base_log2p": -15.59531521308951,
+      "structural_log2p": -15.468747663627578,
+      "full_log2p": -15.477502894536542
+    },
+    "2026-03-16": {
+      "cutoff": "2026-01-01",
+      "truth_word": "drama",
+      "category": "unused_original",
+      "base_log2p": -8.815454720689635,
+      "structural_log2p": -8.746095260741109,
+      "full_log2p": -8.753335818810916
+    },
+    "2026-03-17": {
+      "cutoff": "2026-01-01",
+      "truth_word": "clasp",
+      "category": "unused_original",
+      "base_log2p": -9.044455145408058,
+      "structural_log2p": -8.923311780397693,
+      "full_log2p": -8.929060268243472
+    },
+    "2026-03-18": {
+      "cutoff": "2026-01-01",
+      "truth_word": "amply",
+      "category": "unused_original",
+      "base_log2p": -9.705825544391814,
+      "structural_log2p": -9.876842630105468,
+      "full_log2p": -9.881121335923226
+    },
+    "2026-03-19": {
+      "cutoff": "2026-01-01",
+      "truth_word": "rehab",
+      "category": "unused_original",
+      "base_log2p": -9.172411326420807,
+      "structural_log2p": -9.083285303052527,
+      "full_log2p": -9.086116204313862
+    },
+    "2026-03-20": {
+      "cutoff": "2026-01-01",
+      "truth_word": "oasis",
+      "category": "outside_unused",
+      "base_log2p": -14.814062062743988,
+      "structural_log2p": -14.75566398303854,
+      "full_log2p": -14.733874600749504
+    },
+    "2026-03-21": {
+      "cutoff": "2026-01-01",
+      "truth_word": "slick",
+      "category": "unused_original",
+      "base_log2p": -8.945834512634695,
+      "structural_log2p": -8.869888955860306,
+      "full_log2p": -8.893573128557568
+    },
+    "2026-03-22": {
+      "cutoff": "2026-01-01",
+      "truth_word": "basil",
+      "category": "unused_original",
+      "base_log2p": -8.909366857899597,
+      "structural_log2p": -8.89582094883703,
+      "full_log2p": -8.91764508108002
+    },
+    "2026-03-23": {
+      "cutoff": "2026-01-01",
+      "truth_word": "serif",
+      "category": "unused_original",
+      "base_log2p": -9.902613659302952,
+      "structural_log2p": -10.09028666040796,
+      "full_log2p": -10.110278072850925
+    },
+    "2026-03-24": {
+      "cutoff": "2026-01-01",
+      "truth_word": "brood",
+      "category": "unused_original",
+      "base_log2p": -9.369432496404619,
+      "structural_log2p": -9.451546588290677,
+      "full_log2p": -9.469732234263283
+    },
+    "2026-03-25": {
+      "cutoff": "2026-01-01",
+      "truth_word": "wiser",
+      "category": "unused_original",
+      "base_log2p": -9.034818513857811,
+      "structural_log2p": -8.968654697625107,
+      "full_log2p": -8.985061167077491
+    },
+    "2026-03-26": {
+      "cutoff": "2026-01-01",
+      "truth_word": "befit",
+      "category": "unused_original",
+      "base_log2p": -10.792386538843886,
+      "structural_log2p": -11.225603658819034,
+      "full_log2p": -11.240257182253863
+    },
+    "2026-03-27": {
+      "cutoff": "2026-01-01",
+      "truth_word": "ivory",
+      "category": "repeat",
+      "base_log2p": -15.539962964036995,
+      "structural_log2p": -15.447700642876953,
+      "full_log2p": -15.460627095267556
+    },
+    "2026-03-28": {
+      "cutoff": "2026-01-01",
+      "truth_word": "afoot",
+      "category": "unused_original",
+      "base_log2p": -9.637579418932896,
+      "structural_log2p": -9.458945155444612,
+      "full_log2p": -9.470170060138248
+    },
+    "2026-03-29": {
+      "cutoff": "2026-01-01",
+      "truth_word": "chump",
+      "category": "unused_original",
+      "base_log2p": -9.403021965615864,
+      "structural_log2p": -9.24949943496126,
+      "full_log2p": -9.25904796756669
+    },
+    "2026-03-30": {
+      "cutoff": "2026-01-01",
+      "truth_word": "comet",
+      "category": "repeat",
+      "base_log2p": -15.352056680384845,
+      "structural_log2p": -15.46889668989578,
+      "full_log2p": -15.47679368215427
+    },
+    "2026-03-31": {
+      "cutoff": "2026-01-01",
+      "truth_word": "swamp",
+      "category": "unused_original",
+      "base_log2p": -8.877957478014762,
+      "structural_log2p": -8.75153307486199,
+      "full_log2p": -8.757803018500955
+    },
+    "2026-04-01": {
+      "cutoff": "2026-04-01",
+      "truth_word": "fizzy",
+      "category": "unused_original",
+      "base_log2p": -9.704992629182936,
+      "structural_log2p": -9.54805972374853,
+      "full_log2p": -9.5532137005589
+    },
+    "2026-04-02": {
+      "cutoff": "2026-04-01",
+      "truth_word": "sober",
+      "category": "unused_original",
+      "base_log2p": -8.839349381889727,
+      "structural_log2p": -8.918204809461885,
+      "full_log2p": -8.921612337140827
+    },
+    "2026-04-03": {
+      "cutoff": "2026-04-01",
+      "truth_word": "singe",
+      "category": "unused_original",
+      "base_log2p": -9.466975245149383,
+      "structural_log2p": -9.754696648716928,
+      "full_log2p": -9.756386329184021
+    },
+    "2026-04-04": {
+      "cutoff": "2026-04-01",
+      "truth_word": "sandy",
+      "category": "repeat",
+      "base_log2p": -15.195837209632732,
+      "structural_log2p": -15.720126272352662,
+      "full_log2p": -15.720126272352662
+    },
+    "2026-04-05": {
+      "cutoff": "2026-04-01",
+      "truth_word": "envoy",
+      "category": "unused_original",
+      "base_log2p": -9.340685725616929,
+      "structural_log2p": -9.209709958166583,
+      "full_log2p": -9.20804801480741
+    },
+    "2026-04-06": {
+      "cutoff": "2026-04-01",
+      "truth_word": "sworn",
+      "category": "unused_original",
+      "base_log2p": -9.072415756131223,
+      "structural_log2p": -9.784742640921444,
+      "full_log2p": -9.781446067177278
+    },
+    "2026-04-07": {
+      "cutoff": "2026-04-01",
+      "truth_word": "dense",
+      "category": "unused_original",
+      "base_log2p": -8.83685040749732,
+      "structural_log2p": -8.729851763212066,
+      "full_log2p": -8.724947453390469
+    },
+    "2026-04-08": {
+      "cutoff": "2026-04-01",
+      "truth_word": "inlet",
+      "category": "unused_original",
+      "base_log2p": -8.999378272133006,
+      "structural_log2p": -8.8229366225579,
+      "full_log2p": -8.816451057729967
+    },
+    "2026-04-09": {
+      "cutoff": "2026-04-01",
+      "truth_word": "laden",
+      "category": "unused_original",
+      "base_log2p": -9.129067474907325,
+      "structural_log2p": -9.036589141711678,
+      "full_log2p": -9.028548395104274
+    },
+    "2026-04-10": {
+      "cutoff": "2026-04-01",
+      "truth_word": "carom",
+      "category": "outside_unused",
+      "base_log2p": -16.547977460351714,
+      "structural_log2p": -16.38542445774827,
+      "full_log2p": -16.529184480256614
+    },
+    "2026-04-11": {
+      "cutoff": "2026-04-01",
+      "truth_word": "prude",
+      "category": "unused_original",
+      "base_log2p": -9.301183431216803,
+      "structural_log2p": -9.175332626724195,
+      "full_log2p": -9.203892307355718
+    },
+    "2026-04-12": {
+      "cutoff": "2026-04-01",
+      "truth_word": "alley",
+      "category": "unused_original",
+      "base_log2p": -8.86673108569443,
+      "structural_log2p": -8.798260615952124,
+      "full_log2p": -8.824557887889373
+    },
+    "2026-04-13": {
+      "cutoff": "2026-04-01",
+      "truth_word": "elfin",
+      "category": "unused_original",
+      "base_log2p": -10.623835938543378,
+      "structural_log2p": -10.535709433252467,
+      "full_log2p": -10.559780558277046
+    },
+    "2026-04-14": {
+      "cutoff": "2026-04-01",
+      "truth_word": "cycle",
+      "category": "unused_original",
+      "base_log2p": -8.862174456247985,
+      "structural_log2p": -9.106915348952159,
+      "full_log2p": -9.128796062300141
+    },
+    "2026-04-15": {
+      "cutoff": "2026-04-01",
+      "truth_word": "begun",
+      "category": "unused_original",
+      "base_log2p": -9.124400526958151,
+      "structural_log2p": -9.08490540241963,
+      "full_log2p": -9.10463091868274
+    },
+    "2026-04-16": {
+      "cutoff": "2026-04-01",
+      "truth_word": "cubit",
+      "category": "outside_unused",
+      "base_log2p": -17.2959719108678,
+      "structural_log2p": -17.64745523600939,
+      "full_log2p": -17.43506483478767
+    },
+    "2026-04-17": {
+      "cutoff": "2026-04-01",
+      "truth_word": "belle",
+      "category": "unused_original",
+      "base_log2p": -9.26332523693809,
+      "structural_log2p": -9.505280392081314,
+      "full_log2p": -9.53601373072438
+    },
+    "2026-04-18": {
+      "cutoff": "2026-04-01",
+      "truth_word": "toady",
+      "category": "outside_unused",
+      "base_log2p": -15.361870044427084,
+      "structural_log2p": -15.256469065981365,
+      "full_log2p": -14.95255388188984
+    },
+    "2026-04-19": {
+      "cutoff": "2026-04-01",
+      "truth_word": "stand",
+      "category": "repeat",
+      "base_log2p": -14.803004567990044,
+      "structural_log2p": -14.689484577104867,
+      "full_log2p": -14.72238830371145
+    },
+    "2026-04-20": {
+      "cutoff": "2026-04-01",
+      "truth_word": "weave",
+      "category": "unused_original",
+      "base_log2p": -8.946592132540422,
+      "structural_log2p": -8.852650967487222,
+      "full_log2p": -8.882951763914047
+    },
+    "2026-04-21": {
+      "cutoff": "2026-04-01",
+      "truth_word": "clump",
+      "category": "unused_original",
+      "base_log2p": -9.142517142966401,
+      "structural_log2p": -9.379182898388358,
+      "full_log2p": -9.40692188399215
+    },
+    "2026-04-22": {
+      "cutoff": "2026-04-01",
+      "truth_word": "snore",
+      "category": "unused_original",
+      "base_log2p": -9.03989963861985,
+      "structural_log2p": -9.162866273069511,
+      "full_log2p": -9.188083988987511
+    },
+    "2026-04-23": {
+      "cutoff": "2026-04-01",
+      "truth_word": "tweet",
+      "category": "unused_original",
+      "base_log2p": -8.970282989188542,
+      "structural_log2p": -9.054981287739029,
+      "full_log2p": -9.077717702773434
+    },
+    "2026-04-24": {
+      "cutoff": "2026-04-01",
+      "truth_word": "drunk",
+      "category": "unused_original",
+      "base_log2p": -8.900509040369853,
+      "structural_log2p": -8.72264159306719,
+      "full_log2p": -8.742936109581658
+    },
+    "2026-04-25": {
+      "cutoff": "2026-04-01",
+      "truth_word": "women",
+      "category": "unused_original",
+      "base_log2p": -9.395297391167361,
+      "structural_log2p": -9.50385662145321,
+      "full_log2p": -9.521748081278636
+    },
+    "2026-04-26": {
+      "cutoff": "2026-04-01",
+      "truth_word": "gloss",
+      "category": "unused_original",
+      "base_log2p": -9.226717418915499,
+      "structural_log2p": -9.041179407045988,
+      "full_log2p": -9.056706097392809
+    },
+    "2026-04-27": {
+      "cutoff": "2026-04-01",
+      "truth_word": "eerie",
+      "category": "unused_original",
+      "base_log2p": -9.091048587298918,
+      "structural_log2p": -9.007453633628907,
+      "full_log2p": -9.020653293003312
+    },
+    "2026-04-28": {
+      "cutoff": "2026-04-01",
+      "truth_word": "quack",
+      "category": "unused_original",
+      "base_log2p": -9.254077723412658,
+      "structural_log2p": -9.106165018439622,
+      "full_log2p": -9.11707484256109
+    },
+    "2026-04-29": {
+      "cutoff": "2026-04-01",
+      "truth_word": "rural",
+      "category": "unused_original",
+      "base_log2p": -8.819487858152636,
+      "structural_log2p": -8.736773412527675,
+      "full_log2p": -8.745430060245384
+    },
+    "2026-04-30": {
+      "cutoff": "2026-04-01",
+      "truth_word": "crock",
+      "category": "unused_original",
+      "base_log2p": -9.214415873717963,
+      "structural_log2p": -9.241278329424414,
+      "full_log2p": -9.247717928630104
+    },
+    "2026-05-01": {
+      "cutoff": "2026-04-01",
+      "truth_word": "plume",
+      "category": "unused_original",
+      "base_log2p": -9.145161674597604,
+      "structural_log2p": -9.091614150567318,
+      "full_log2p": -9.095872304102294
+    },
+    "2026-05-02": {
+      "cutoff": "2026-04-01",
+      "truth_word": "bring",
+      "category": "repeat",
+      "base_log2p": -14.694259041449556,
+      "structural_log2p": -14.581826534229464,
+      "full_log2p": -14.583938325783503
+    },
+    "2026-05-03": {
+      "cutoff": "2026-04-01",
+      "truth_word": "puffy",
+      "category": "unused_original",
+      "base_log2p": -9.18458671912254,
+      "structural_log2p": -9.298567476220876,
+      "full_log2p": -9.298567476220876
+    },
+    "2026-05-04": {
+      "cutoff": "2026-04-01",
+      "truth_word": "riser",
+      "category": "unused_original",
+      "base_log2p": -9.314570997549465,
+      "structural_log2p": -9.437118274580751,
+      "full_log2p": -9.435040546067022
+    },
+    "2026-05-05": {
+      "cutoff": "2026-04-01",
+      "truth_word": "latch",
+      "category": "unused_original",
+      "base_log2p": -8.946515533709166,
+      "structural_log2p": -8.783097518978092,
+      "full_log2p": -8.778975623466295
+    },
+    "2026-05-06": {
+      "cutoff": "2026-04-01",
+      "truth_word": "liken",
+      "category": "unused_original",
+      "base_log2p": -9.441392269064025,
+      "structural_log2p": -9.540154841705986,
+      "full_log2p": -9.534021845032754
+    },
+    "2026-05-07": {
+      "cutoff": "2026-04-01",
+      "truth_word": "budge",
+      "category": "unused_original",
+      "base_log2p": -9.13999800129003,
+      "structural_log2p": -9.245449729975931,
+      "full_log2p": -9.23733820812635
+    },
+    "2026-05-08": {
+      "cutoff": "2026-04-01",
+      "truth_word": "umbra",
+      "category": "unused_original",
+      "base_log2p": -11.096951834100894,
+      "structural_log2p": -10.984863365373613,
+      "full_log2p": -10.974805410288717
+    },
+    "2026-05-09": {
+      "cutoff": "2026-04-01",
+      "truth_word": "satin",
+      "category": "unused_original",
+      "base_log2p": -8.903711353410769,
+      "structural_log2p": -8.834282170596895,
+      "full_log2p": -8.822309395959493
+    },
+    "2026-05-10": {
+      "cutoff": "2026-04-01",
+      "truth_word": "parka",
+      "category": "unused_original",
+      "base_log2p": -9.431704480598766,
+      "structural_log2p": -9.553868724298628,
+      "full_log2p": -9.540012271295781
+    },
+    "2026-05-11": {
+      "cutoff": "2026-04-01",
+      "truth_word": "newly",
+      "category": "unused_original",
+      "base_log2p": -8.955037484893772,
+      "structural_log2p": -8.796614092700997,
+      "full_log2p": -8.781957271523376
+    },
+    "2026-05-12": {
+      "cutoff": "2026-04-01",
+      "truth_word": "clock",
+      "category": "repeat",
+      "base_log2p": -14.530005494441241,
+      "structural_log2p": -14.400308299355093,
+      "full_log2p": -14.383951520196257
+    },
+    "2026-05-13": {
+      "cutoff": "2026-04-01",
+      "truth_word": "dowdy",
+      "category": "unused_original",
+      "base_log2p": -10.081122175623946,
+      "structural_log2p": -9.989691219301665,
+      "full_log2p": -9.972957649090034
+    },
+    "2026-05-14": {
+      "cutoff": "2026-04-01",
+      "truth_word": "waver",
+      "category": "unused_original",
+      "base_log2p": -9.08300033945911,
+      "structural_log2p": -8.951140855625534,
+      "full_log2p": -8.932881593757491
+    },
+    "2026-05-15": {
+      "cutoff": "2026-04-01",
+      "truth_word": "creed",
+      "category": "unused_original",
+      "base_log2p": -8.980258050681963,
+      "structural_log2p": -9.097674026775882,
+      "full_log2p": -9.077914287640661
+    },
+    "2026-05-16": {
+      "cutoff": "2026-04-01",
+      "truth_word": "mover",
+      "category": "unused_original",
+      "base_log2p": -9.176261357799866,
+      "structural_log2p": -9.137826126060837,
+      "full_log2p": -9.116590732931998
+    },
+    "2026-05-17": {
+      "cutoff": "2026-04-01",
+      "truth_word": "bylaw",
+      "category": "unused_original",
+      "base_log2p": -9.970632929986836,
+      "structural_log2p": -9.83291316130569,
+      "full_log2p": -9.810226551566945
+    },
+    "2026-05-18": {
+      "cutoff": "2026-04-01",
+      "truth_word": "loath",
+      "category": "unused_original",
+      "base_log2p": -9.40423882875351,
+      "structural_log2p": -9.28424148273958,
+      "full_log2p": -9.260127713068595
+    },
+    "2026-05-19": {
+      "cutoff": "2026-04-01",
+      "truth_word": "dusty",
+      "category": "unused_original",
+      "base_log2p": -8.870262124083393,
+      "structural_log2p": -8.985262173251451,
+      "full_log2p": -8.961148403580468
+    },
+    "2026-05-20": {
+      "cutoff": "2026-04-01",
+      "truth_word": "wreck",
+      "category": "unused_original",
+      "base_log2p": -8.83346771532561,
+      "structural_log2p": -8.911792858594493,
+      "full_log2p": -8.88767908892351
+    },
+    "2026-05-21": {
+      "cutoff": "2026-04-01",
+      "truth_word": "agree",
+      "category": "repeat",
+      "base_log2p": -14.37701415749148,
+      "structural_log2p": -14.273733030206062,
+      "full_log2p": -14.249619260535079
+    },
+    "2026-05-22": {
+      "cutoff": "2026-04-01",
+      "truth_word": "vocal",
+      "category": "unused_original",
+      "base_log2p": -8.838960116796967,
+      "structural_log2p": -8.708904029297923,
+      "full_log2p": -8.68479025962694
+    },
+    "2026-05-23": {
+      "cutoff": "2026-04-01",
+      "truth_word": "chuck",
+      "category": "unused_original",
+      "base_log2p": -9.001379576246684,
+      "structural_log2p": -8.962138112277152,
+      "full_log2p": -8.93802434260617
+    },
+    "2026-05-24": {
+      "cutoff": "2026-04-01",
+      "truth_word": "niece",
+      "category": "unused_original",
+      "base_log2p": -8.798778892859143,
+      "structural_log2p": -8.73248032957234,
+      "full_log2p": -8.708366559901357
+    },
+    "2026-05-25": {
+      "cutoff": "2026-04-01",
+      "truth_word": "visit",
+      "category": "unused_original",
+      "base_log2p": -8.761778682522483,
+      "structural_log2p": -8.88461309658181,
+      "full_log2p": -8.860499326910828
+    },
+    "2026-05-26": {
+      "cutoff": "2026-04-01",
+      "truth_word": "couch",
+      "category": "unused_original",
+      "base_log2p": -8.724680117914765,
+      "structural_log2p": -8.905788356327177,
+      "full_log2p": -8.881674586656194
+    },
+    "2026-05-27": {
+      "cutoff": "2026-04-01",
+      "truth_word": "stuff",
+      "category": "unused_original",
+      "base_log2p": -8.820357489055962,
+      "structural_log2p": -8.74671144713995,
+      "full_log2p": -8.722597677468967
+    },
+    "2026-05-28": {
+      "cutoff": "2026-04-01",
+      "truth_word": "divot",
+      "category": "outside_unused",
+      "base_log2p": -15.849568813074347,
+      "structural_log2p": -15.839103541360663,
+      "full_log2p": -16.20018475445755
+    },
+    "2026-05-29": {
+      "cutoff": "2026-04-01",
+      "truth_word": "clang",
+      "category": "unused_original",
+      "base_log2p": -9.447799101294022,
+      "structural_log2p": -9.745372656243164,
+      "full_log2p": -9.773932336874687
+    },
+    "2026-05-30": {
+      "cutoff": "2026-04-01",
+      "truth_word": "smile",
+      "category": "repeat",
+      "base_log2p": -14.268178608328435,
+      "structural_log2p": -14.391094463923443,
+      "full_log2p": -14.415385799678301
+    },
+    "2026-05-31": {
+      "cutoff": "2026-04-01",
+      "truth_word": "etude",
+      "category": "unused_original",
+      "base_log2p": -10.27587112111786,
+      "structural_log2p": -10.17324100594904,
+      "full_log2p": -10.19547469785352
+    },
+    "2026-06-01": {
+      "cutoff": "2026-04-01",
+      "truth_word": "chili",
+      "category": "unused_original",
+      "base_log2p": -8.879304305877197,
+      "structural_log2p": -9.180581364914996,
+      "full_log2p": -9.200790678032462
+    },
+    "2026-06-02": {
+      "cutoff": "2026-04-01",
+      "truth_word": "basis",
+      "category": "unused_original",
+      "base_log2p": -8.975386728578568,
+      "structural_log2p": -8.814816368844303,
+      "full_log2p": -8.833034076038395
+    },
+    "2026-06-03": {
+      "cutoff": "2026-04-01",
+      "truth_word": "notch",
+      "category": "unused_original",
+      "base_log2p": -8.872384096996798,
+      "structural_log2p": -8.710980236918047,
+      "full_log2p": -8.727238624668452
+    },
+    "2026-06-04": {
+      "cutoff": "2026-04-01",
+      "truth_word": "alloy",
+      "category": "unused_original",
+      "base_log2p": -9.001668587724476,
+      "structural_log2p": -8.877665866919791,
+      "full_log2p": -8.891996741117008
+    },
+    "2026-06-05": {
+      "cutoff": "2026-04-01",
+      "truth_word": "nobly",
+      "category": "unused_original",
+      "base_log2p": -9.695989148715515,
+      "structural_log2p": -9.868588395174001,
+      "full_log2p": -9.881023086891439
+    },
+    "2026-06-06": {
+      "cutoff": "2026-04-01",
+      "truth_word": "morph",
+      "category": "unused_original",
+      "base_log2p": -9.328548218552617,
+      "structural_log2p": -9.244149146213813,
+      "full_log2p": -9.254718517455577
+    },
+    "2026-06-07": {
+      "cutoff": "2026-04-01",
+      "truth_word": "thumb",
+      "category": "repeat",
+      "base_log2p": -14.265854317428465,
+      "structural_log2p": -14.167064817079924,
+      "full_log2p": -14.17579926650278
+    },
+    "2026-06-08": {
+      "cutoff": "2026-04-01",
+      "truth_word": "mafia",
+      "category": "unused_original",
+      "base_log2p": -8.969736793940282,
+      "structural_log2p": -9.090943911500757,
+      "full_log2p": -9.097873380108755
+    },
+    "2026-06-09": {
+      "cutoff": "2026-04-01",
+      "truth_word": "wharf",
+      "category": "unused_original",
+      "base_log2p": -9.165673000532,
+      "structural_log2p": -9.12553285914527,
+      "full_log2p": -9.13068683595564
+    },
+    "2026-06-10": {
+      "cutoff": "2026-04-01",
+      "truth_word": "align",
+      "category": "unused_original",
+      "base_log2p": -8.86374960489141,
+      "structural_log2p": -9.023489602378717,
+      "full_log2p": -9.026897130057657
+    },
+    "2026-06-11": {
+      "cutoff": "2026-04-01",
+      "truth_word": "testy",
+      "category": "unused_original",
+      "base_log2p": -9.258743552537366,
+      "structural_log2p": -9.41247933392279,
+      "full_log2p": -9.414169014389882
+    },
+    "2026-06-12": {
+      "cutoff": "2026-04-01",
+      "truth_word": "break",
+      "category": "repeat",
+      "base_log2p": -14.069788485038886,
+      "structural_log2p": -13.9874054240251,
+      "full_log2p": -13.9874054240251
+    },
+    "2026-06-13": {
+      "cutoff": "2026-04-01",
+      "truth_word": "quell",
+      "category": "unused_original",
+      "base_log2p": -9.497790934628377,
+      "structural_log2p": -9.39758325958076,
+      "full_log2p": -9.395921316221587
+    },
+    "2026-06-14": {
+      "cutoff": "2026-04-01",
+      "truth_word": "sepia",
+      "category": "unused_original",
+      "base_log2p": -9.595090858809215,
+      "structural_log2p": -9.593716726757865,
+      "full_log2p": -9.5904201530137
+    },
+    "2026-06-15": {
+      "cutoff": "2026-04-01",
+      "truth_word": "broil",
+      "category": "unused_original",
+      "base_log2p": -9.161036186800953,
+      "structural_log2p": -9.294713512119841,
+      "full_log2p": -9.289809202298244
+    },
+    "2026-06-16": {
+      "cutoff": "2026-04-01",
+      "truth_word": "amaze",
+      "category": "unused_original",
+      "base_log2p": -8.991961296650315,
+      "structural_log2p": -9.08784262678904,
+      "full_log2p": -9.081357061961107
+    },
+    "2026-06-17": {
+      "cutoff": "2026-04-01",
+      "truth_word": "token",
+      "category": "unused_original",
+      "base_log2p": -8.855734920467821,
+      "structural_log2p": -8.965217593429161,
+      "full_log2p": -8.957176846821756
+    },
+    "2026-06-18": {
+      "cutoff": "2026-04-01",
+      "truth_word": "entry",
+      "category": "unused_original",
+      "base_log2p": -8.685957174576501,
+      "structural_log2p": -8.615704493847211,
+      "full_log2p": -8.606134236196379
+    },
+    "2026-06-19": {
+      "cutoff": "2026-04-01",
+      "truth_word": "emoji",
+      "category": "outside_unused",
+      "base_log2p": -15.1183719790117,
+      "structural_log2p": -15.26632279669763,
+      "full_log2p": -15.434133628414715
+    },
+    "2026-06-20": {
+      "cutoff": "2026-04-01",
+      "truth_word": "drake",
+      "category": "unused_original",
+      "base_log2p": -8.956907540133882,
+      "structural_log2p": -8.893804914297132,
+      "full_log2p": -8.922364594928654
+    },
+    "2026-06-21": {
+      "cutoff": "2026-04-01",
+      "truth_word": "alibi",
+      "category": "unused_original",
+      "base_log2p": -9.152769189901584,
+      "structural_log2p": -9.250536441026112,
+      "full_log2p": -9.276833712963361
+    },
+    "2026-06-22": {
+      "cutoff": "2026-04-01",
+      "truth_word": "ovate",
+      "category": "unused_original",
+      "base_log2p": -10.013455402520512,
+      "structural_log2p": -10.008042232320001,
+      "full_log2p": -10.03211335734458
+    },
+    "2026-06-23": {
+      "cutoff": "2026-04-01",
+      "truth_word": "curry",
+      "category": "unused_original",
+      "base_log2p": -8.815901685240895,
+      "structural_log2p": -8.755774739783748,
+      "full_log2p": -8.777655453131732
+    },
+    "2026-06-24": {
+      "cutoff": "2026-04-01",
+      "truth_word": "queer",
+      "category": "unused_original",
+      "base_log2p": -9.11106607085239,
+      "structural_log2p": -9.027761515490685,
+      "full_log2p": -9.047487031753795
+    },
+    "2026-06-25": {
+      "cutoff": "2026-04-01",
+      "truth_word": "unity",
+      "category": "unused_original",
+      "base_log2p": -8.775769646773384,
+      "structural_log2p": -8.762686654068577,
+      "full_log2p": -8.780291673085623
+    },
+    "2026-06-26": {
+      "cutoff": "2026-04-01",
+      "truth_word": "acute",
+      "category": "repeat",
+      "base_log2p": -14.052758434248545,
+      "structural_log2p": -14.32404681709142,
+      "full_log2p": -14.339565529827908
+    },
+    "2026-06-27": {
+      "cutoff": "2026-04-01",
+      "truth_word": "scoop",
+      "category": "unused_original",
+      "base_log2p": -8.781251607840828,
+      "structural_log2p": -8.65633924526255,
+      "full_log2p": -8.66980533967645
+    },
+    "2026-06-28": {
+      "cutoff": "2026-04-01",
+      "truth_word": "emcee",
+      "category": "unused_original",
+      "base_log2p": -10.338630413097588,
+      "structural_log2p": -10.282320691844754,
+      "full_log2p": -10.293767358736433
+    },
+    "2026-06-29": {
+      "cutoff": "2026-04-01",
+      "truth_word": "crude",
+      "category": "unused_original",
+      "base_log2p": -8.709552441456642,
+      "structural_log2p": -8.954833094984961,
+      "full_log2p": -8.964293033829422
+    },
+    "2026-06-30": {
+      "cutoff": "2026-04-01",
+      "truth_word": "puppy",
+      "category": "unused_original",
+      "base_log2p": -8.838301763680272,
+      "structural_log2p": -8.760116426120662,
+      "full_log2p": -8.767621850880273
+    },
+    "2026-07-01": {
+      "cutoff": "2026-07-01",
+      "truth_word": "demur",
+      "category": "unused_original",
+      "base_log2p": -10.528710167179927,
+      "structural_log2p": -10.443601804054282,
+      "full_log2p": -10.440064999233773
+    },
+    "2026-07-02": {
+      "cutoff": "2026-07-01",
+      "truth_word": "maven",
+      "category": "outside_unused",
+      "base_log2p": -15.40090747011664,
+      "structural_log2p": -15.350213400554656,
+      "full_log2p": -15.291271033912036
+    },
+    "2026-07-03": {
+      "cutoff": "2026-07-01",
+      "truth_word": "baton",
+      "category": "repeat",
+      "base_log2p": -14.101983112552505,
+      "structural_log2p": -14.039968682340758,
+      "full_log2p": -14.147747089907053
+    },
+    "2026-07-04": {
+      "cutoff": "2026-07-01",
+      "truth_word": "pizza",
+      "category": "unused_original",
+      "base_log2p": -8.8760378850026,
+      "structural_log2p": -8.936133092536794,
+      "full_log2p": -8.950607477828317
+    },
+    "2026-07-05": {
+      "cutoff": "2026-07-01",
+      "truth_word": "swami",
+      "category": "unused_original",
+      "base_log2p": -10.433642524287542,
+      "structural_log2p": -10.370348927684983,
+      "full_log2p": -10.383340678810804
+    },
+    "2026-07-06": {
+      "cutoff": "2026-07-01",
+      "truth_word": "toddy",
+      "category": "unused_original",
+      "base_log2p": -9.725320883991046,
+      "structural_log2p": -9.649088636992197,
+      "full_log2p": -9.658848492502036
+    },
+    "2026-07-07": {
+      "cutoff": "2026-07-01",
+      "truth_word": "sling",
+      "category": "unused_original",
+      "base_log2p": -8.859579589937459,
+      "structural_log2p": -8.911934491121949,
+      "full_log2p": -8.92049005215893
+    },
+    "2026-07-08": {
+      "cutoff": "2026-07-01",
+      "truth_word": "demon",
+      "category": "unused_original",
+      "base_log2p": -8.822640721950082,
+      "structural_log2p": -8.916805172010653,
+      "full_log2p": -8.92420268230625
+    },
+    "2026-07-09": {
+      "cutoff": "2026-07-01",
+      "truth_word": "amend",
+      "category": "unused_original",
+      "base_log2p": -8.852043821894434,
+      "structural_log2p": -8.743754027218893,
+      "full_log2p": -8.750039143854787
+    },
+    "2026-07-10": {
+      "cutoff": "2026-07-01",
+      "truth_word": "canal",
+      "category": "unused_original",
+      "base_log2p": -8.715427606087218,
+      "structural_log2p": -8.612253547414957,
+      "full_log2p": -8.617471348846585
+    },
+    "2026-07-11": {
+      "cutoff": "2026-07-01",
+      "truth_word": "avian",
+      "category": "unused_original",
+      "base_log2p": -9.64145647069495,
+      "structural_log2p": -9.670408577417037,
+      "full_log2p": -9.674603571472217
+    },
+    "2026-07-12": {
+      "cutoff": "2026-07-01",
+      "truth_word": "clack",
+      "category": "unused_original",
+      "base_log2p": -9.672513570884849,
+      "structural_log2p": -9.699865179762092,
+      "full_log2p": -9.703081311611836
+    },
+    "2026-07-13": {
+      "cutoff": "2026-07-01",
+      "truth_word": "stout",
+      "category": "repeat",
+      "base_log2p": -14.025675403637338,
+      "structural_log2p": -14.090809785135802,
+      "full_log2p": -14.146037456680874
+    },
+    "2026-07-14": {
+      "cutoff": "2026-07-01",
+      "truth_word": "steak",
+      "category": "unused_original",
+      "base_log2p": -8.716498653795476,
+      "structural_log2p": -8.879132062682471,
+      "full_log2p": -8.869969685813679
+    },
+    "2026-07-15": {
+      "cutoff": "2026-07-01",
+      "truth_word": "pshaw",
+      "category": "outside_unused",
+      "base_log2p": -17.409414220829444,
+      "structural_log2p": -17.3448154818477,
+      "full_log2p": -17.28047864015425
+    },
+    "2026-07-16": {
+      "cutoff": "2026-07-01",
+      "truth_word": "butte",
+      "category": "unused_original",
+      "base_log2p": -9.452710597292475,
+      "structural_log2p": -9.351472103161278,
+      "full_log2p": -9.369620114484238
+    },
+    "2026-07-17": {
+      "cutoff": "2026-07-01",
+      "truth_word": "legal",
+      "category": "unused_original",
+      "base_log2p": -8.652950529420893,
+      "structural_log2p": -8.60558894856944,
+      "full_log2p": -8.62227863704685
+    },
+    "2026-07-18": {
+      "cutoff": "2026-07-01",
+      "truth_word": "booth",
+      "category": "unused_original",
+      "base_log2p": -8.681819646456127,
+      "structural_log2p": -8.717861403917505,
+      "full_log2p": -8.733144526199938
+    },
+    "2026-07-19": {
+      "cutoff": "2026-07-01",
+      "truth_word": "churn",
+      "category": "unused_original",
+      "base_log2p": -9.14262572730055,
+      "structural_log2p": -9.179810563761242,
+      "full_log2p": -9.193738227901614
+    },
+    "2026-07-20": {
+      "cutoff": "2026-07-01",
+      "truth_word": "diver",
+      "category": "unused_original",
+      "base_log2p": -8.873774701327823,
+      "structural_log2p": -8.7812234150172,
+      "full_log2p": -8.79384608862779
+    },
+    "2026-07-21": {
+      "cutoff": "2026-07-01",
+      "truth_word": "shill",
+      "category": "outside_unused",
+      "base_log2p": -15.267434477040192,
+      "structural_log2p": -15.334019902898715,
+      "full_log2p": -15.101044958030243
+    },
+    "2026-07-22": {
+      "cutoff": "2026-07-01",
+      "truth_word": "lorry",
+      "category": "unused_original",
+      "base_log2p": -9.344698715386258,
+      "structural_log2p": -9.396259153653373,
+      "full_log2p": -9.422827404725679
+    },
+    "2026-07-23": {
+      "cutoff": "2026-07-01",
+      "truth_word": "orbit",
+      "category": "unused_original",
+      "base_log2p": -8.843699886516044,
+      "structural_log2p": -8.762543180492449,
+      "full_log2p": -8.787518335007599
+    },
+    "2026-07-24": {
+      "cutoff": "2026-07-01",
+      "truth_word": "putty",
+      "category": "unused_original",
+      "base_log2p": -9.072398728623895,
+      "structural_log2p": -9.010713781452814,
+      "full_log2p": -9.034150848684106
+    },
+    "2026-07-25": {
+      "cutoff": "2026-07-01",
+      "truth_word": "aloha",
+      "category": "outside_unused",
+      "base_log2p": -14.894250029297378,
+      "structural_log2p": -14.829865346654184,
+      "full_log2p": -14.553177865263923
+    },
+    "2026-07-26": {
+      "cutoff": "2026-07-01",
+      "truth_word": "grape",
+      "category": "unused_original",
+      "base_log2p": -8.680144400839774,
+      "structural_log2p": -8.607685050503733,
+      "full_log2p": -8.640764274720523
+    },
+    "2026-07-27": {
+      "cutoff": "2026-07-01",
+      "truth_word": "poser",
+      "category": "unused_original",
+      "base_log2p": -9.14088813481026,
+      "structural_log2p": -9.254795347937309,
+      "full_log2p": -9.2861322891296
+    },
+    "2026-07-28": {
+      "cutoff": "2026-07-01",
+      "truth_word": "sonar",
+      "category": "unused_original",
+      "base_log2p": -9.170965238337239,
+      "structural_log2p": -9.22370062093843,
+      "full_log2p": -9.253353419187595
+    },
+    "2026-07-29": {
+      "cutoff": "2026-07-01",
+      "truth_word": "valve",
+      "category": "unused_original",
+      "base_log2p": -8.835695150163982,
+      "structural_log2p": -8.767831447246957,
+      "full_log2p": -8.795857528862367
+    },
+    "2026-07-30": {
+      "cutoff": "2026-07-01",
+      "truth_word": "flume",
+      "category": "repeat",
+      "base_log2p": -14.789695415210268,
+      "structural_log2p": -14.738219872695526,
+      "full_log2p": -14.743497153699332
+    },
+    "2026-07-31": {
+      "cutoff": "2026-07-01",
+      "truth_word": "purse",
+      "category": "unused_original",
+      "base_log2p": -8.675430479299898,
+      "structural_log2p": -8.866600447513246,
+      "full_log2p": -8.87301254024495
+    },
+    "2026-08-01": {
+      "cutoff": "2026-07-01",
+      "truth_word": "slush",
+      "category": "unused_original",
+      "base_log2p": -9.16934994283178,
+      "structural_log2p": -9.218207677674185,
+      "full_log2p": -9.223062611324142
+    },
+    "2026-08-02": {
+      "cutoff": "2026-07-01",
+      "truth_word": "penal",
+      "category": "unused_original",
+      "base_log2p": -8.990436815387353,
+      "structural_log2p": -9.152864340498692,
+      "full_log2p": -9.156879696386815
+    },
+    "2026-08-03": {
+      "cutoff": "2026-07-01",
+      "truth_word": "reply",
+      "category": "unused_original",
+      "base_log2p": -8.687975314034473,
+      "structural_log2p": -8.575568829746627,
+      "full_log2p": -8.578083110838534
+    },
+    "2026-08-04": {
+      "cutoff": "2026-07-01",
+      "truth_word": "motif",
+      "category": "unused_original",
+      "base_log2p": -9.24840034469647,
+      "structural_log2p": -9.161749461054853,
+      "full_log2p": -9.162815393144852
+    },
+    "2026-08-05": {
+      "cutoff": "2026-07-01",
+      "truth_word": "posit",
+      "category": "unused_original",
+      "base_log2p": -9.478019010533938,
+      "structural_log2p": -9.66017426603625,
+      "full_log2p": -9.659843916030695
+    },
+    "2026-08-06": {
+      "cutoff": "2026-07-01",
+      "truth_word": "gripe",
+      "category": "repeat",
+      "base_log2p": -13.996924126148324,
+      "structural_log2p": -13.92750603811567,
+      "full_log2p": -14.010546040507
+    },
+    "2026-08-07": {
+      "cutoff": "2026-07-01",
+      "truth_word": "feign",
+      "category": "repeat",
+      "base_log2p": -14.354774197039905,
+      "structural_log2p": -14.280648507897624,
+      "full_log2p": -14.417996857458396
+    },
+    "2026-08-08": {
+      "cutoff": "2026-07-01",
+      "truth_word": "privy",
+      "category": "unused_original",
+      "base_log2p": -9.4950283590699,
+      "structural_log2p": -9.676129952362832,
+      "full_log2p": -9.662141196809538
+    },
+    "2026-08-09": {
+      "cutoff": "2026-07-01",
+      "truth_word": "clunk",
+      "category": "outside_unused",
+      "base_log2p": -15.259164883901018,
+      "structural_log2p": -15.214498419520734,
+      "full_log2p": -15.199352164435393
+    },
+    "2026-08-10": {
+      "cutoff": "2026-07-01",
+      "truth_word": "snipe",
+      "category": "unused_original",
+      "base_log2p": -9.269850057255109,
+      "structural_log2p": -9.257700650520576,
+      "full_log2p": -9.281564300280381
+    },
+    "2026-08-11": {
+      "cutoff": "2026-07-01",
+      "truth_word": "fence",
+      "category": "unused_original",
+      "base_log2p": -8.635751400772687,
+      "structural_log2p": -8.691971205379028,
+      "full_log2p": -8.713921991181344
+    },
+    "2026-08-12": {
+      "cutoff": "2026-07-01",
+      "truth_word": "wimpy",
+      "category": "unused_original",
+      "base_log2p": -9.395241442248716,
+      "structural_log2p": -9.321636638679577,
+      "full_log2p": -9.341736398043844
+    },
+    "2026-08-13": {
+      "cutoff": "2026-07-01",
+      "truth_word": "crash",
+      "category": "unused_original",
+      "base_log2p": -8.651881484465765,
+      "structural_log2p": -8.709597707798272,
+      "full_log2p": -8.726116177758009
+    },
+    "2026-08-14": {
+      "cutoff": "2026-07-01",
+      "truth_word": "geode",
+      "category": "outside_unused",
+      "base_log2p": -15.85666305546411,
+      "structural_log2p": -15.808384712622354,
+      "full_log2p": -15.55185873176587
+    },
+    "2026-08-15": {
+      "cutoff": "2026-07-01",
+      "truth_word": "loose",
+      "category": "unused_original",
+      "base_log2p": -8.756915076321729,
+      "structural_log2p": -8.683734002540275,
+      "full_log2p": -8.713160911803454
+    },
+    "2026-08-16": {
+      "cutoff": "2026-07-01",
+      "truth_word": "aspic",
+      "category": "outside_unused",
+      "base_log2p": -16.46086189863831,
+      "structural_log2p": -16.40249683433306,
+      "full_log2p": -16.07712009217553
+    },
+    "2026-08-17": {
+      "cutoff": "2026-07-01",
+      "truth_word": "tribe",
+      "category": "unused_original",
+      "base_log2p": -8.653071143271566,
+      "structural_log2p": -8.5952009230891,
+      "full_log2p": -8.629504937144874
+    },
+    "2026-08-18": {
+      "cutoff": "2026-07-01",
+      "truth_word": "strip",
+      "category": "unused_original",
+      "base_log2p": -8.648572145325973,
+      "structural_log2p": -8.586450339135691,
+      "full_log2p": -8.618671091136267
+    },
+    "2026-08-19": {
+      "cutoff": "2026-07-01",
+      "truth_word": "grill",
+      "category": "unused_original",
+      "base_log2p": -8.710497635397783,
+      "structural_log2p": -8.769109648147504,
+      "full_log2p": -8.799311566309527
+    },
+    "2026-08-20": {
+      "cutoff": "2026-07-01",
+      "truth_word": "murky",
+      "category": "unused_original",
+      "base_log2p": -8.971928713653845,
+      "structural_log2p": -8.909854916686559,
+      "full_log2p": -8.938101655679361
+    },
+    "2026-08-21": {
+      "cutoff": "2026-07-01",
+      "truth_word": "trace",
+      "category": "repeat",
+      "base_log2p": -13.806577210650648,
+      "structural_log2p": -13.878288297732135,
+      "full_log2p": -13.915288757636146
+    },
+    "2026-08-22": {
+      "cutoff": "2026-07-01",
+      "truth_word": "prawn",
+      "category": "unused_original",
+      "base_log2p": -9.499831457959937,
+      "structural_log2p": -9.434325661851656,
+      "full_log2p": -9.443631818344565
+    },
+    "2026-08-23": {
+      "cutoff": "2026-07-01",
+      "truth_word": "olden",
+      "category": "unused_original",
+      "base_log2p": -9.430893041391846,
+      "structural_log2p": -9.370660665566046,
+      "full_log2p": -9.37806642473949
+    },
+    "2026-08-24": {
+      "cutoff": "2026-07-01",
+      "truth_word": "runny",
+      "category": "outside_unused",
+      "base_log2p": -14.213962850942345,
+      "structural_log2p": -14.159453372719828,
+      "full_log2p": -13.974974744198935
+    },
+    "2026-08-25": {
+      "cutoff": "2026-07-01",
+      "truth_word": "click",
+      "category": "repeat",
+      "base_log2p": -13.800833005017692,
+      "structural_log2p": -13.747837202158971,
+      "full_log2p": -13.8922159022441
+    },
+    "2026-08-26": {
+      "cutoff": "2026-07-01",
+      "truth_word": "capon",
+      "category": "outside_unused",
+      "base_log2p": -16.106644397393012,
+      "structural_log2p": -16.189812221004622,
+      "full_log2p": -15.857699689588188
+    },
+    "2026-08-27": {
+      "cutoff": "2026-07-01",
+      "truth_word": "uncut",
+      "category": "unused_original",
+      "base_log2p": -8.983100345345962,
+      "structural_log2p": -8.915299412158662,
+      "full_log2p": -8.942742750483072
+    },
+    "2026-08-28": {
+      "cutoff": "2026-07-01",
+      "truth_word": "tween",
+      "category": "outside_unused",
+      "base_log2p": -14.412240965604834,
+      "structural_log2p": -14.555836085944035,
+      "full_log2p": -14.225899440421523
+    },
+    "2026-08-29": {
+      "cutoff": "2026-07-01",
+      "truth_word": "blood",
+      "category": "unused_original",
+      "base_log2p": -8.580841315589788,
+      "structural_log2p": -8.535183181687753,
+      "full_log2p": -8.564808401209666
+    },
+    "2026-08-30": {
+      "cutoff": "2026-07-01",
+      "truth_word": "intel",
+      "category": "outside_unused",
+      "base_log2p": -14.229408491708497,
+      "structural_log2p": -14.16558003745265,
+      "full_log2p": -13.839993675716945
+    },
+    "2026-08-31": {
+      "cutoff": "2026-07-01",
+      "truth_word": "mound",
+      "category": "unused_original",
+      "base_log2p": -8.742141554318184,
+      "structural_log2p": -8.689611679053158,
+      "full_log2p": -8.724262309634115
+    },
+    "2026-09-01": {
+      "cutoff": "2026-07-01",
+      "truth_word": "remix",
+      "category": "outside_unused",
+      "base_log2p": -14.050984319882096,
+      "structural_log2p": -14.00509583897996,
+      "full_log2p": -13.684318865730011
+    },
+    "2026-09-02": {
+      "cutoff": "2026-07-01",
+      "truth_word": "ruler",
+      "category": "unused_original",
+      "base_log2p": -8.64824930915082,
+      "structural_log2p": -8.727944357095167,
+      "full_log2p": -8.76703886665556
+    },
+    "2026-09-03": {
+      "cutoff": "2026-07-01",
+      "truth_word": "joist",
+      "category": "unused_original",
+      "base_log2p": -10.16167363223105,
+      "structural_log2p": -10.123973839920353,
+      "full_log2p": -10.158284626654904
+    },
+    "2026-09-04": {
+      "cutoff": "2026-07-01",
+      "truth_word": "wager",
+      "category": "unused_original",
+      "base_log2p": -8.798081581405603,
+      "structural_log2p": -8.80679769333833,
+      "full_log2p": -8.83870935087477
+    },
+    "2026-09-05": {
+      "cutoff": "2026-07-01",
+      "truth_word": "soupy",
+      "category": "outside_unused",
+      "base_log2p": -14.947086011803888,
+      "structural_log2p": -14.905530649785787,
+      "full_log2p": -14.63647155369616
+    },
+    "2026-09-06": {
+      "cutoff": "2026-07-01",
+      "truth_word": "beige",
+      "category": "outside_unused",
+      "base_log2p": -13.842847757078713,
+      "structural_log2p": -13.79405982105575,
+      "full_log2p": -13.457402818243366
+    },
+    "2026-09-07": {
+      "cutoff": "2026-07-01",
+      "truth_word": "blind",
+      "category": "unused_original",
+      "base_log2p": -8.581599749232065,
+      "structural_log2p": -8.698597903874662,
+      "full_log2p": -8.745433541904395
+    },
+    "2026-09-08": {
+      "cutoff": "2026-07-01",
+      "truth_word": "liven",
+      "category": "outside_unused",
+      "base_log2p": -15.000673116529365,
+      "structural_log2p": -14.933381776746415,
+      "full_log2p": -14.624495362409617
+    },
+    "2026-09-09": {
+      "cutoff": "2026-07-01",
+      "truth_word": "burst",
+      "category": "unused_original",
+      "base_log2p": -8.62015352622531,
+      "structural_log2p": -8.870759694204303,
+      "full_log2p": -8.922112948764388
+    },
+    "2026-09-10": {
+      "cutoff": "2026-07-01",
+      "truth_word": "dryly",
+      "category": "unused_original",
+      "base_log2p": -9.94415827108125,
+      "structural_log2p": -9.874375031123892,
+      "full_log2p": -9.922785477862176
+    },
+    "2026-09-11": {
+      "cutoff": "2026-07-01",
+      "truth_word": "aster",
+      "category": "outside_unused",
+      "base_log2p": -14.60098257044541,
+      "structural_log2p": -14.588727424394643,
+      "full_log2p": -14.308483398748907
+    },
+    "2026-09-12": {
+      "cutoff": "2026-07-01",
+      "truth_word": "nifty",
+      "category": "outside_unused",
+      "base_log2p": -13.77232577699243,
+      "structural_log2p": -13.718558150450743,
+      "full_log2p": -13.395324112590764
+    },
+    "2026-09-13": {
+      "cutoff": "2026-07-01",
+      "truth_word": "focus",
+      "category": "repeat",
+      "base_log2p": -13.754080408438266,
+      "structural_log2p": -13.7027690057992,
+      "full_log2p": -13.720630632767213
+    },
+    "2026-09-14": {
+      "cutoff": "2026-07-01",
+      "truth_word": "rinse",
+      "category": "unused_original",
+      "base_log2p": -8.733753189259748,
+      "structural_log2p": -8.672967474871024,
+      "full_log2p": -8.709542508777954
+    },
+    "2026-09-15": {
+      "cutoff": "2026-07-01",
+      "truth_word": "dealt",
+      "category": "unused_original",
+      "base_log2p": -8.828942534330857,
+      "structural_log2p": -8.915665372880026,
+      "full_log2p": -8.948866265521756
+    },
+    "2026-09-16": {
+      "cutoff": "2026-07-01",
+      "truth_word": "wispy",
+      "category": "unused_original",
+      "base_log2p": -9.588803228772285,
+      "structural_log2p": -9.5408375585611,
+      "full_log2p": -9.570746224500407
+    },
+    "2026-09-17": {
+      "cutoff": "2026-07-01",
+      "truth_word": "theta",
+      "category": "unused_original",
+      "base_log2p": -10.107501098846381,
+      "structural_log2p": -10.049711385316416,
+      "full_log2p": -10.074805540477318
+    },
+    "2026-09-18": {
+      "cutoff": "2026-07-01",
+      "truth_word": "snowy",
+      "category": "unused_original",
+      "base_log2p": -8.843458037335733,
+      "structural_log2p": -8.79599718804851,
+      "full_log2p": -8.818131470664536
+    },
+    "2026-09-19": {
+      "cutoff": "2026-07-01",
+      "truth_word": "waken",
+      "category": "outside_unused",
+      "base_log2p": -14.10369797397306,
+      "structural_log2p": -14.175283404480163,
+      "full_log2p": -13.977341276403774
+    },
+    "2026-09-20": {
+      "cutoff": "2026-07-01",
+      "truth_word": "shone",
+      "category": "unused_original",
+      "base_log2p": -10.278117848100903,
+      "structural_log2p": -10.32433900919239,
+      "full_log2p": -10.371595352243729
+    },
+    "2026-09-21": {
+      "cutoff": "2026-07-01",
+      "truth_word": "pager",
+      "category": "outside_unused",
+      "base_log2p": -14.108083822719012,
+      "structural_log2p": -14.050607684492451,
+      "full_log2p": -13.741538455219631
+    },
+    "2026-09-22": {
+      "cutoff": "2026-07-01",
+      "truth_word": "stoke",
+      "category": "unused_original",
+      "base_log2p": -8.925013494272276,
+      "structural_log2p": -9.089416078397274,
+      "full_log2p": -9.141093213504956
+    },
+    "2026-09-23": {
+      "cutoff": "2026-07-01",
+      "truth_word": "forth",
+      "category": "repeat",
+      "base_log2p": -13.885010518266101,
+      "structural_log2p": -13.79546096262107,
+      "full_log2p": -13.896539707613298
+    },
+    "2026-09-24": {
+      "cutoff": "2026-07-01",
+      "truth_word": "messy",
+      "category": "outside_unused",
+      "base_log2p": -13.417400704238108,
+      "structural_log2p": -13.349665619363721,
+      "full_log2p": -13.058003843404274
+    },
+    "2026-09-25": {
+      "cutoff": "2026-07-01",
+      "truth_word": "copse",
+      "category": "unused_original",
+      "base_log2p": -10.094239370718956,
+      "structural_log2p": -9.974521964699704,
+      "full_log2p": -10.021192607260526
+    }
+  },
+  "summary": {
+    "base": {
+      "days": 268,
+      "mean_log2p": -10.460802663701962,
+      "mean_log2p_gain_vs_base": 0.0,
+      "descriptive_normal_ci95_gain": [
+        0.0,
+        0.0
+      ]
+    },
+    "structural": {
+      "days": 268,
+      "mean_log2p": -10.474548054698282,
+      "mean_log2p_gain_vs_base": -0.013745390996320845,
+      "descriptive_normal_ci95_gain": [
+        -0.03369362663233537,
+        0.0062028446396936825
+      ]
+    },
+    "full": {
+      "days": 268,
+      "mean_log2p": -10.465912569910223,
+      "mean_log2p_gain_vs_base": -0.005109906208261284,
+      "descriptive_normal_ci95_gain": [
+        -0.028345578900887958,
+        0.01812576648436539
+      ]
+    }
+  },
+  "elapsed_seconds": 3.309
+}
